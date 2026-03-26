@@ -62,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <a href="/bezirke" className="navbar__link">Bezirke</a>
                   <a href="/ratgeber" className="navbar__link">Ratgeber</a>
                   <a href="/ueber-uns" className="navbar__link">Über uns</a>
+                  <a href="/unsere-arbeiten" className="navbar__link">Galerie</a>
                   <a href="/kontakt" className="navbar__link">Kontakt</a>
                </div>
 
@@ -166,6 +167,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
                     { label: 'Über uns', href: '/ueber-uns' },
+                    { label: 'Galerie', href: '/unsere-arbeiten' },
                     { label: 'Ratgeber', href: '/ratgeber' },
                     { label: 'Blog', href: '/blog' },
                     { label: 'Kontakt', href: '/kontakt' },

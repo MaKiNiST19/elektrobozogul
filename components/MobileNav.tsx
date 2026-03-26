@@ -95,6 +95,7 @@ export default function MobileNav() {
             { label: "Bezirke", href: "/bezirke" },
             { label: "Ratgeber", href: "/ratgeber" },
             { label: "Über uns", href: "/ueber-uns" },
+            { label: "Galerie", href: "/unsere-arbeiten" },
             { label: "Kontakt", href: "/kontakt" },
           ].map((item) => (
             <a key={item.href} href={item.href} onClick={() => setOpen(false)} style={{
