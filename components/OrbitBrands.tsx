@@ -59,7 +59,7 @@ const brands = [
 
 export default function OrbitBrands() {
   return (
-    <section style={{ background: "white", padding: "80px 0", overflow: "hidden" }}>
+    <section style={{ background: "white", padding: "100px 0", overflow: "hidden" }}>
       <style>{`
         @keyframes orbit-spin {
           from { transform: rotate(0deg); }
@@ -67,97 +67,94 @@ export default function OrbitBrands() {
         }
       `}</style>
 
-      <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div className="orbit-layout">
+      <div style={{ maxWidth: "var(--max-w)", margin: "0 auto", width: "calc(100% - 48px)", position: "relative" }}>
+        <div className="orbit-layout" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "80px", flexWrap: "wrap", position: "relative" }}>
 
           {/* ── Text ── */}
-          <div className="orbit-text">
-            <p style={{ color: "var(--primary)", fontSize: "12px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "12px" }}>
+          <div className="orbit-text" style={{ flex: "1", minWidth: "320px", maxWidth: "600px", zIndex: 5 }}>
+            <p style={{ color: "var(--primary)", fontSize: "14px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "16px" }}>
               Vertrauen durch Erfahrung
             </p>
-            <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)", fontWeight: 800, color: "var(--dark)", lineHeight: 1.2, marginBottom: "20px" }}>
+            <h2 style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 800, color: "var(--dark)", lineHeight: 1.1, marginBottom: "28px" }}>
               Unternehmen, Hausverwaltungen und Kunden setzen auf Elektro-Bozogul
             </h2>
-            <p style={{ fontSize: "15px", color: "var(--mid)", lineHeight: 1.7, marginBottom: "32px" }}>
+            <p style={{ fontSize: "18px", color: "var(--mid)", lineHeight: 1.7, marginBottom: "40px" }}>
               In Wien zählt nicht nur saubere Elektroarbeit, sondern auch Verlässlichkeit im Alltag.
               Elektro-Bozogul begleitet Privatwohnungen, Betriebe und Hausverwaltungen mit klarer
               Kommunikation und fachgerechter Ausführung.
             </p>
-            <ul style={{ listStyle: "none", padding: 0, marginBottom: "32px", display: "flex", flexDirection: "column", gap: "12px" }}>
+            <ul style={{ listStyle: "none", padding: 0, marginBottom: "48px", display: "flex", flexDirection: "column", gap: "20px" }}>
               {[
                 "Verlässlicher Partner für laufende Elektroarbeiten",
                 "Saubere Ausführung für Wohn- und Gewerbeobjekte",
                 "Vertrauen durch nachvollziehbare Kommunikation",
               ].map((item) => (
-                <li key={item} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14px", fontWeight: 600, color: "var(--dark)" }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                <li key={item} style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "17px", fontWeight: 600, color: "var(--dark)" }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   {item}
                 </li>
               ))}
             </ul>
-            <a href="/leistungen" style={{
-              display: "inline-flex", alignItems: "center", gap: "8px",
-              background: "var(--primary)", color: "white",
-              padding: "13px 28px", borderRadius: "12px",
-              fontWeight: 700, fontSize: "14px", textDecoration: "none",
-            }}>
-              Leistungen ansehen
+            <a href="/leistungen" className="btn-sparkle" style={{ display: "inline-flex" }}>
+              <span className="text_button" style={{ padding: "16px 40px", fontSize: "16px", fontWeight: 800 }}>
+                Leistungen ansehen
+              </span>
             </a>
           </div>
 
           {/* ── Orbit Visual ── */}
-          <div className="orbit-visual">
-            <div style={{ position: "relative", width: "380px", height: "380px", margin: "0 auto", flexShrink: 0 }}>
+          <div className="orbit-visual" style={{ flex: "1", display: "flex", justifyContent: "flex-end", minWidth: "540px", position: "relative" }}>
+            <div style={{ position: "relative", width: "540px", height: "540px", flexShrink: 0 }}>
 
               {/* Dashed rings */}
-              <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} viewBox="0 0 380 380">
-                <circle cx="190" cy="190" r="100" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeDasharray="5 4" />
-                <circle cx="190" cy="190" r="165" fill="none" stroke="#d1d5db" strokeWidth="1.5" strokeDasharray="5 4" />
+              <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} viewBox="0 0 540 540">
+                <circle cx="270" cy="270" r="130" fill="none" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="8 6" />
+                <circle cx="270" cy="270" r="230" fill="none" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="8 6" />
               </svg>
 
               {/* Centre logo */}
               <div style={{
                 position: "absolute", top: "50%", left: "50%",
                 transform: "translate(-50%,-50%)",
-                width: "84px", height: "84px", borderRadius: "50%",
+                width: "96px", height: "96px", borderRadius: "50%",
                 background: "white", border: "2px solid var(--border)",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                boxShadow: "0 8px 24px rgba(0,0,0,0.10)",
-                zIndex: 10, padding: "6px",
+                boxShadow: "0 12px 36px rgba(15, 78, 57, 0.12)",
+                zIndex: 10, padding: "10px",
               }}>
-                <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "6px" }} />
+                <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "10px" }} />
               </div>
 
-              {/* Inner orbit – 4 brands CCW – r=100 */}
+              {/* Inner orbit – 4 brands CCW – r=130 */}
               {brands.slice(0, 4).map((b, i) => (
-                <OrbitItem key={b.alt} radius={100} duration={22} delay={-(i * 22 / 4)} reverse size={74}>
+                <OrbitItem key={b.alt} radius={130} duration={25} delay={-(i * 25 / 4)} reverse size={80}>
                   <div style={{
-                    width: "74px", height: "74px", borderRadius: "50%",
+                    width: "80px", height: "80px", borderRadius: "50%",
                     background: "white", border: "1.5px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    boxShadow: "0 4px 14px rgba(0,0,0,0.10)", padding: "5px",
-                    position: "relative",
-                    overflow: "hidden"
-                  }}>
-                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "5px" }} />
-                  </div>
-                </OrbitItem>
-              ))}
-
-              {/* Outer orbit – 7 brands CW – r=165 */}
-              {brands.slice(4).map((b, i) => (
-                <OrbitItem key={b.alt} radius={165} duration={34} delay={-(i * 34 / 7)} size={86}>
-                  <div style={{
-                    width: "86px", height: "86px", borderRadius: "50%",
-                    background: "white", border: "1.5px solid var(--border)",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.11)", padding: "7px",
+                    boxShadow: "0 6px 16px rgba(0,0,0,0.08)", padding: "7px",
                     position: "relative",
                     overflow: "hidden"
                   }}>
                     <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "7px" }} />
+                  </div>
+                </OrbitItem>
+              ))}
+
+              {/* Outer orbit – 7 brands CW – r=230 */}
+              {brands.slice(4).map((b, i) => (
+                <OrbitItem key={b.alt} radius={230} duration={45} delay={-(i * 45 / 7)} size={92}>
+                  <div style={{
+                    width: "92px", height: "92px", borderRadius: "50%",
+                    background: "white", border: "1.5px solid var(--border)",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.08)", padding: "12px",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}>
+                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "12px" }} />
                   </div>
                 </OrbitItem>
               ))}
