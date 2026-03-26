@@ -18,7 +18,7 @@ export default function DatenschutzPage() {
 
       <section className="section" style={{ paddingTop: '140px' }}>
         <div className="container">
-          <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '0 32px' }}>
             <h1 style={{ marginBottom: '40px' }}>Datenschutzerklärung</h1>
             <article className="prose">
               <h2>1. Verantwortlicher</h2>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { LEISTUNGEN } from "@/lib/leistungen";
 
@@ -41,7 +42,15 @@ export default function MobileNav() {
           style={{ left: isOpen ? '0' : '-100%' }}
         >
           <div className="mobile-menu__header">
-            <img src="/images/logo.png" alt="Logo" className="mobile-menu__logo" />
+            <div style={{ position: 'relative', width: '150px', height: '32px' }}>
+              <Image 
+                src="/images/logo.png" 
+                alt="Logo" 
+                fill 
+                style={{ objectFit: 'contain' }}
+                className="mobile-menu__logo" 
+              />
+            </div>
             <button className="mobile-close" onClick={() => setIsOpen(false)}>×</button>
           </div>
           

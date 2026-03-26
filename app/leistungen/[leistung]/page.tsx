@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { LEISTUNGEN } from '@/lib/leistungen';
@@ -8,6 +9,7 @@ import { PolaroidCard } from '@/components/base/polaroid-card';
 import { RatingBadge } from '@/components/foundations/rating-badge';
 import { BadgeGroup } from '@/components/base/badges/badge-groups';
 import BrandCarousel from '@/components/foundations/BrandCarousel';
+import LeistungSeoText from '@/components/LeistungSeoText';
 
 export async function generateStaticParams() {
   return LEISTUNGEN.map(l => ({ leistung: l.slug }));
@@ -80,15 +82,14 @@ export default function LeistungDetailPage({ params }: { params: { leistung: str
           inset: 0,
           zIndex: 0
         }}>
-          <img
+          <Image
             src={leistung.image}
             alt=""
+            fill
             style={{
-              width: '100%',
-              height: '100%',
               objectFit: 'cover',
-              display: 'block'
             }}
+            priority
           />
           {/* Dark Overlay */}
           <div style={{
@@ -240,31 +241,24 @@ export default function LeistungDetailPage({ params }: { params: { leistung: str
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SECTION – 6 GRID GALLERY
-      ═══════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: 'var(--white)' }}>
-        <div className="container">
-          <div className="section-header" style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <p className="eyebrow">Impressionen</p>
-            <h2>Unsere Arbeit in Bildern</h2>
-          </div>
-          <div style={{
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-            gap: '40px',
-            alignItems: 'center',
-            justifyItems: 'center'
-          }}>
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst1.jpg" caption="Projekt 1" rotation={-3} />
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst2.jpg" caption="Projekt 2" rotation={2} />
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst3.jpg" caption="Projekt 3" rotation={-1} />
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst4.jpg" caption="Projekt 4" rotation={4} />
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst5.jpg" caption="Projekt 5" rotation={-2} />
-            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst6.jpg" caption="Projekt 6" rotation={1} />
+      {/* Galeri ve Projeler - Polaroid */}
+      <section className="section" style={{ background: 'var(--bg)', paddingTop: '100px' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: '2rem', marginBottom: '16px' }}>Vor Ort in ganz Wien</h2>
+          <p style={{ maxWidth: '700px', margin: '0 auto 48px', color: 'var(--mid)' }}>Wir sind stolz auf unsere Arbeit. Hier finden Sie ein paar Eindrücke von unseren elektrotechnischen Arbeiten in verschiedenen Wiener Bezirken.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
+            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst.jpg" caption={`Elektro-Service in ${leistung.shortTitle}`} rotation={-2} />
+            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst1.jpg" caption="Meisterqualität vor Ort" rotation={1.5} />
+            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst2.jpg" caption="Sicher & Normgerecht" rotation={-1} />
+            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst3.jpg" caption="Ihr lokaler Partner" rotation={2} />
           </div>
         </div>
       </section>
+
+      <BrandCarousel />
+
+      {/* Authority SEO Content */}
+      <LeistungSeoText leistung={leistung} />
     </>
   );
 }

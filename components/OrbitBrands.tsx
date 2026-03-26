@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 interface OrbitItemProps {
   children: React.ReactNode;
@@ -120,7 +121,7 @@ export default function OrbitBrands() {
                 boxShadow: "0 8px 24px rgba(0,0,0,0.10)",
                 zIndex: 10, padding: "8px",
               }}>
-                <img src="/images/logo.png" alt="Elektro-Bozogul" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "8px" }} />
               </div>
 
               {/* Inner orbit – 3 brands CCW – r=100 */}
@@ -131,8 +132,10 @@ export default function OrbitBrands() {
                     background: "white", border: "1.5px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     boxShadow: "0 4px 14px rgba(0,0,0,0.10)", padding: "9px",
+                    position: "relative",
+                    overflow: "hidden"
                   }}>
-                    <img src={b.src} alt={b.alt} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "9px" }} />
                   </div>
                 </OrbitItem>
               ))}
@@ -145,8 +148,10 @@ export default function OrbitBrands() {
                     background: "white", border: "1.5px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     boxShadow: "0 4px 16px rgba(0,0,0,0.11)", padding: "11px",
+                    position: "relative",
+                    overflow: "hidden"
                   }}>
-                    <img src={b.src} alt={b.alt} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "11px" }} />
                   </div>
                 </OrbitItem>
               ))}

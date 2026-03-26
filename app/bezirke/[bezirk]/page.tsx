@@ -7,6 +7,7 @@ import { generateBezirkSchema, generateFAQSchema } from '@/lib/schema';
 import { RatingBadge } from '@/components/foundations/rating-badge';
 import { BadgeGroup } from '@/components/base/badges/badge-groups';
 import { MagicCard } from '@/components/base/magic-card';
+import BrandCarousel from '@/components/foundations/BrandCarousel';
 import { PolaroidCard } from '@/components/base/polaroid-card';
 import path from 'path';
 import fs from 'fs';
@@ -196,21 +197,29 @@ export default function BezirkPage({ params }: { params: { bezirk: string } }) {
         </a>
       </div>
 
+      <BrandCarousel />
+
       {/* Leistungen im Bezirk - Magic Grid */}
       <section className="section" style={{ background: 'var(--bg)', paddingTop: '120px' }} id="leistungen">
         <div className="container">
-          <div className="section-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 60px' }}>
+          <div className="section-header" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 60px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <p className="eyebrow">Unsere Expertise</p>
-            <h2>Elektriker-Leistungen im {bezirk.name}</h2>
-            <p>Von der schnellen Störungsbehebung bis zur komplexen Neuinstallation – wir decken das gesamte Spektrum der Elektrotechnik im {bezirk.shortName} Wien ab.</p>
+            <h2 style={{ textAlign: 'center' }}>Elektriker-Leistungen im {bezirk.name}</h2>
+            <p style={{ textAlign: 'center' }}>Von der schnellen Störungsbehebung bis zur komplexen Neuinstallation – wir decken das gesamte Spektrum der Elektrotechnik im {bezirk.shortName} Wien ab.</p>
           </div>
 
           <div className="service-grid">
             {LEISTUNGEN.map(l => (
               <a key={l.slug} href={`/leistungen/${l.slug}`} style={{ textDecoration: 'none' }}>
                 <MagicCard className="service-magic-card">
-                  <div className="service-card__img-container">
-                    <img src={l.image} alt={`${l.title} ${bezirk.name}`} />
+                  <div className="service-card__img-container" style={{ position: 'relative', height: '180px', overflow: 'hidden' }}>
+                    <Image
+                      src={l.image}
+                      alt={`${l.title} ${bezirk.name}`}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
                   <div className="service-card__body">
                     <h3 className="service-card__title">{l.title}</h3>
@@ -323,8 +332,8 @@ export default function BezirkPage({ params }: { params: { bezirk: string } }) {
                 <div style={{ marginTop: '40px', paddingTop: '30px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                   <p style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--yellow)', marginBottom: '15px' }}>Ihr Team für {bezirk.name}</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <img src="/images/logo.png" alt="Logo" style={{ width: '30px' }} />
+                    <div style={{ position: 'relative', width: '50px', height: '50px', borderRadius: '50%', background: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                      <Image src="/images/logo.png" alt="Logo" fill style={{ objectFit: 'contain', padding: '10px' }} />
                     </div>
                     <div>
                       <div style={{ fontWeight: 700, fontSize: '14px' }}>Elektro-Bozogul</div>

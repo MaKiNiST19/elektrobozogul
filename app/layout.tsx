@@ -150,9 +150,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
                     { label: 'Alle Bezirke', href: '/bezirke' },
-                    { label: 'Innere Stadt', href: '/bezirke/innere-stadt' },
-                    { label: 'Leopoldstadt', href: '/bezirke/leopoldstadt' },
-                    { label: 'Landstraße', href: '/bezirke/landstrasse' },
+                    { label: '1010 Innere Stadt', href: '/bezirke/1010-innere-stadt' },
+                    { label: '1020 Leopoldstadt', href: '/bezirke/1020-leopoldstadt' },
+                    { label: '1030 Landstraße', href: '/bezirke/1030-landstrasse' },
                     { label: 'Alle anzeigen', href: '/bezirke' },
                   ].map((item) => (
                     <li key={item.label}><a href={item.href} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', textDecoration: 'none' }}>{item.label}</a></li>

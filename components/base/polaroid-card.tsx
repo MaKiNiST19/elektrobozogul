@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface PolaroidCardProps {
@@ -10,8 +11,14 @@ export const PolaroidCard: React.FC<PolaroidCardProps> = ({ imageUrl, caption, r
   return (
     <div className="polaroid-wrapper">
       <div className="polaroid" style={{ transform: `rotate(${rotation}deg)` } as any}>
-        <div className="photo">
-          <img src={imageUrl} alt={caption} className="photo-img" />
+        <div className="photo" style={{ position: 'relative', height: '200px', width: '200px', overflow: 'hidden' }}>
+          <Image
+            src={imageUrl}
+            alt={caption}
+            fill
+            style={{ objectFit: 'cover' }}
+            className="photo-img"
+          />
           <div className="dust" />
           <div className="scratches" />
         </div>

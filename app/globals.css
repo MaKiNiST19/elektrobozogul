@@ -3,8 +3,6 @@
    Referans: Deytes İklimlendirme tarz  navbar + hero + badge bar
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -684,8 +682,52 @@ p  { color: var(--mid); line-height: 1.75; }
 @media (max-width: 960px) {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 640px) {
-  .service-grid { grid-template-columns: 1fr; }
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  /* Mobilde kartları yatay (horizontal) yapıyoruz */
+  .service-card__inner {
+    flex-direction: row !important;
+    height: auto !important;
+    min-height: 120px;
+    align-items: stretch;
+  }
+  
+  .service-card__img-container {
+    width: 35% !important; /* Görsel solda %35 yer kaplasın */
+    height: auto !important;
+    min-height: 120px;
+    flex-shrink: 0;
+  }
+
+  .service-card__body {
+    width: 65%;
+    padding: 12px 14px !important;
+    text-align: left !important; /* Metinler sola yaslı olsun */
+    border-top: none !important;
+    border-left: 3px solid var(--border);
+    justify-content: center;
+  }
+
+  .service-card__title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+  }
+
+  .service-card__desc {
+    display: none; /* Mobilde yer kazanmak için açıklamayı gizliyoruz */
+  }
+
+  .service-card__body .btn-sparkle {
+    margin-top: 8px !important;
+    width: fit-content !important;
+    transform: scale(0.8) !important;
+    transform-origin: left center !important;
+  }
 }
 
 /* Bezirk grid */

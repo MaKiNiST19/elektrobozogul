@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,18 +10,27 @@ export const metadata: Metadata = {
 export default function UeberUnsPage() {
   return (
     <>
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">Startseite</a></li>
-          <li><span>Über uns</span></li>
-        </ol>
-      </nav>
-
-      {/* Hero */}
-      <section className="leistung-hero" style={{ position: 'relative', overflow: 'hidden', background: 'var(--primary)', color: 'var(--white)', padding: '132px 0 80px', borderBottom: '4px solid var(--yellow)' }}>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <h1 style={{ color: 'white', fontSize: '2.8rem', fontWeight: 800 }}>Über Elektro-Bozogul</h1>
-          <p style={{ maxWidth: '700px', fontSize: '1.2rem', color: 'rgba(255,255,255,.85)', lineHeight: 1.6, marginTop: '20px' }}>
+      {/* 50vh Hero */}
+      <section className="hero" style={{ height: '50vh', minHeight: '450px', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/images/leistungen/wien-Sanierung-Modernisierung.jpg"
+          alt="Alle 23 Wiener Bezirke"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(15,78,57,0.88) 0%, rgba(0,0,0,0.65) 100%)' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          {/* Breadcrumb inside hero */}
+          <nav className="breadcrumb" aria-label="Breadcrumb" style={{ background: 'transparent', border: 'none', padding: '0 0 24px 0' }}>
+            <ol style={{ padding: 0 }}>
+              <li><a href="/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Startseite</a></li>
+              <li style={{ color: 'white' }}><span>Über uns</span></li>
+            </ol>
+          </nav>
+          <p className="eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,255,255,0.2)', marginBottom: '16px' }}>Unser Unternehmen</p>
+          <h1 style={{ color: 'white', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '24px' }}>Über Elektro-Bozogul</h1>
+          <p style={{ maxWidth: '750px', fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
             Ihr konzessionierter Elektriker-Meisterbetrieb in Wien – kompetent, verlässlich und nah am Kunden.
           </p>
         </div>

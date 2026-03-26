@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { BEZIRKE } from '@/lib/bezirke';
@@ -7,6 +8,7 @@ import { generateBezirkLeistungSchema, generateFAQSchema } from '@/lib/schema';
 import { BadgeGroup } from '@/components/base/badges/badge-groups';
 import { RatingBadge } from '@/components/foundations/rating-badge';
 import { PolaroidCard } from '@/components/base/polaroid-card';
+import BrandCarousel from '@/components/foundations/BrandCarousel';
 import BezirkLeistungSeoText from '@/components/BezirkLeistungSeoText';
 import path from 'path';
 import fs from 'fs';
@@ -85,10 +87,12 @@ export default function BezirkLeistungPage({ params }: { params: { bezirk: strin
         {/* Background Image - bezirk-specific */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           {hasBezirkImage && (
-            <img
+            <Image
               src={`/images/bezirke/${bezirkImgFile}`}
               alt={`${bezirk.name} Wien`}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              priority
             />
           )}
           {/* Dark Overlay */}
@@ -170,6 +174,8 @@ export default function BezirkLeistungPage({ params }: { params: { bezirk: strin
           />
         </a>
       </div>
+
+      <BrandCarousel />
 
       {/* ═══════════════════════════════════════════════════
           COMPACT BRAND GRID (Right below Badge Bar)

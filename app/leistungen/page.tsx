@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { LEISTUNGEN } from '@/lib/leistungen';
 import { MagicCard } from '@/components/base/magic-card';
@@ -11,32 +12,47 @@ export const metadata: Metadata = {
 export default function LeistungenPage() {
   return (
     <>
-      {/* Breadcrumb */}
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">Startseite</a></li>
-          <li><span>Leistungen</span></li>
-        </ol>
-      </nav>
+      {/* 50vh Hero */}
+      <section className="hero" style={{ height: '50vh', minHeight: '450px', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/images/leistungen/elektriker-wien.jpg"
+          alt="Elektriker Wien Leistungen"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(15,78,57,0.88) 0%, rgba(0,0,0,0.65) 100%)' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          {/* Breadcrumb inside hero */}
+          <nav className="breadcrumb" aria-label="Breadcrumb" style={{ background: 'transparent', border: 'none', padding: '0 0 24px 0' }}>
+            <ol style={{ padding: 0 }}>
+              <li><a href="/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Startseite</a></li>
+              <li style={{ color: 'white' }}><span>Leistungen</span></li>
+            </ol>
+          </nav>
+          <p className="eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,255,255,0.2)', marginBottom: '16px' }}>Unsere Expertise</p>
+          <h1 style={{ color: 'white', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '24px' }}>Meisterhafte Elektro-Services</h1>
+          <p style={{ maxWidth: '700px', fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
+            Von der schnellen Hilfe im Notfall bis hin zur zukunftssicheren Photovoltaik-Anlage. 
+            Entdecken Sie unsere umfassenden Leistungen für Wien und Umgebung.
+          </p>
+        </div>
+      </section>
 
       <section className="section" style={{ background: 'var(--bg)' }}>
         <div className="container">
-          <div className="section-header">
-            <p className="eyebrow">Unsere Expertise</p>
-            <h1>Professionelle Elektro-Dienstleistungen in Wien</h1>
-            <p>
-              Von der einfachen Steckdosen-Montage bis zur komplexen Photovoltaik-Anlage
-              oder Smart-Home-Lösung. Als befugter Wiener Fachbetrieb bieten wir
-              maßgeschneiderte Lösungen für Privat- und Gewerbekunden.
-            </p>
-          </div>
-
           <div className="service-grid">
             {LEISTUNGEN.map(l => (
               <MagicCard key={l.slug} className="service-magic-card">
                 <a href={`/leistungen/${l.slug}`} className="service-card__inner" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                  <div className="service-card__img-container">
-                    <img src={l.image} alt={l.title} />
+                  <div className="service-card__img-container" style={{ position: 'relative', height: '200px' }}>
+                    <Image
+                      src={l.image}
+                      alt={l.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
                   <div className="service-card__body" style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                     <h2 className="service-card__title" style={{ fontSize: '1.2rem' }}>{l.title}</h2>

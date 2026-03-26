@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function BrandCarousel() {
   const brands = [
     { name: 'Siemens', src: '/images/brands/siemens-logo-wien.png' },
@@ -26,10 +28,12 @@ export default function BrandCarousel() {
         </p>
         <div className="brand-carousel-track">
           {allBrands.map((brand, i) => (
-            <div key={`${brand.name}-${i}`} className="brand-carousel-item">
-              <img
+            <div key={`${brand.name}-${i}`} className="brand-carousel-item" style={{ position: 'relative', width: '120px', height: '40px', margin: '0 20px' }}>
+              <Image
                 src={brand.src}
                 alt={`${brand.name} Partner Wien`}
+                fill
+                style={{ objectFit: 'contain' }}
               />
             </div>
           ))}

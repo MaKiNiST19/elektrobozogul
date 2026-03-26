@@ -18,7 +18,7 @@ export default function AGBPage() {
 
       <section className="section" style={{ paddingTop: '140px' }}>
         <div className="container">
-          <div style={{ maxWidth: '760px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto', padding: '0 32px' }}>
             <h1 style={{ marginBottom: '40px' }}>Allgemeine Geschäftsbedingungen (AGB)</h1>
             <article className="prose">
               <h2>§ 1 Geltungsbereich</h2>

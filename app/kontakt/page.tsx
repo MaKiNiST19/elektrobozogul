@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,26 +10,41 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><a href="/">Startseite</a></li>
-          <li><span>Kontakt</span></li>
-        </ol>
-      </nav>
-
-      {/* Hero */}
-      <section className="leistung-hero" style={{ position: 'relative', overflow: 'hidden', background: 'var(--primary)', color: 'var(--white)', padding: '132px 0 80px', borderBottom: '4px solid var(--yellow)' }}>
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <h1 style={{ color: 'white', fontSize: '2.8rem', fontWeight: 800 }}>Kontakt aufnehmen</h1>
-          <p style={{ maxWidth: '700px', fontSize: '1.2rem', color: 'rgba(255,255,255,.85)', lineHeight: 1.6, marginTop: '20px' }}>
-            Sie haben eine Frage, benötigen ein Angebot oder einen dringenden Notdienst? Wir sind für Sie erreichbar.
+      {/* 50vh Hero */}
+      <section className="hero" style={{ height: '50vh', minHeight: '450px', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+        <Image
+          src="/images/leistungen/wien-elektriker-notdienst.jpg"
+          alt="Elektriker Wien Kontakt"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(15,78,57,0.88) 0%, rgba(0,0,0,0.65) 100%)' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          {/* Breadcrumb inside hero */}
+          <nav className="breadcrumb" aria-label="Breadcrumb" style={{ background: 'transparent', border: 'none', padding: '0 0 24px 0' }}>
+            <ol style={{ padding: 0 }}>
+              <li><a href="/" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Startseite</a></li>
+              <li style={{ color: 'white' }}><span>Kontakt</span></li>
+            </ol>
+          </nav>
+          <p className="eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,255,255,0.2)', marginBottom: '16px' }}>Immer für Sie da</p>
+          <h1 style={{ color: 'white', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '24px' }}>Kontakt aufnehmen</h1>
+          <p style={{ maxWidth: '700px', fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
+            Sie haben eine Frage, benötigen ein Angebot oder einen dringenden Notdienst? 
+            Wir sind in ganz Wien schnell für Sie erreichbar.
           </p>
         </div>
       </section>
 
       <section className="section">
-        <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }}>
+        <div className="container" style={{ padding: '0 20px' }}>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', 
+            gap: '40px', 
+            alignItems: 'start' 
+          }}>
 
             {/* Contact Info Side */}
             <div>
