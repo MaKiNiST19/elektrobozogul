@@ -7,6 +7,12 @@ export default function BrandCarousel() {
     { name: 'Eaton', src: '/images/brands/eaton-logo-wien.png' },
     { name: 'Jung', src: '/images/brands/jung-logo-wien.png' },
     { name: 'Berker', src: '/images/brands/berker-logo-wien.png' },
+    { name: 'Schneider Electric', src: '/images/brands/schneider-electric-logo-wien-elektriker.png' },
+    { name: 'Schrack Technik', src: '/images/brands/schrack-technik-logo-wien-elektriker.png' },
+    { name: 'Viko', src: '/images/brands/viko-logo-wien-elektriker.png' },
+    { name: 'Fermax', src: '/images/brands/fermax-logo-wien-elektriker.png' },
+    { name: 'Mersen', src: '/images/brands/mersen-logo-wien-elektriker.png' },
+    { name: 'OBO Bettermann', src: '/images/brands/obo-betterman-logo-wien-elektriker.png' },
   ];
 
   // Duplicate for seamless loop

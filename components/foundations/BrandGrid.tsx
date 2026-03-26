@@ -1,13 +1,20 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const BrandGrid = ({ compact = true }: { compact?: boolean }) => {
   const brands = [
-    { name: 'Siemens', logo: '🔴' },
-    { name: 'Legrand', logo: '🔵' },
-    { name: 'Eaton', logo: '⚡' },
-    { name: 'Hager', logo: '🟢' },
-    { name: 'ABB', logo: '🟠' },
+    { name: 'Siemens', src: '/images/brands/siemens-logo-wien.png' },
+    { name: 'Legrand', src: '/images/brands/legrand-logo-wien.png' },
+    { name: 'Eaton', src: '/images/brands/eaton-logo-wien.png' },
+    { name: 'Jung', src: '/images/brands/jung-logo-wien.png' },
+    { name: 'Berker', src: '/images/brands/berker-logo-wien.png' },
+    { name: 'Schneider Electric', src: '/images/brands/schneider-electric-logo-wien-elektriker.png' },
+    { name: 'Schrack Technik', src: '/images/brands/schrack-technik-logo-wien-elektriker.png' },
+    { name: 'Viko', src: '/images/brands/viko-logo-wien-elektriker.png' },
+    { name: 'Fermax', src: '/images/brands/fermax-logo-wien-elektriker.png' },
+    { name: 'Mersen', src: '/images/brands/mersen-logo-wien-elektriker.png' },
+    { name: 'OBO Bettermann', src: '/images/brands/obo-betterman-logo-wien-elektriker.png' },
   ];
 
   return (
@@ -119,7 +126,14 @@ const BrandGrid = ({ compact = true }: { compact?: boolean }) => {
                   (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
                 }}
               >
-                <div style={{ fontSize: '24px' }}>{brand.logo}</div>
+                <div style={{ position: 'relative', width: '40px', height: '40px' }}>
+                  <Image
+                    src={brand.src}
+                    alt={brand.name}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               </div>
             );
           })}

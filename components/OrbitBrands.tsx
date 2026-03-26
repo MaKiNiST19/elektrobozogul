@@ -49,6 +49,12 @@ const brands = [
   { src: "/images/brands/eaton-logo-wien.png",   alt: "Eaton"   },
   { src: "/images/brands/jung-logo-wien.png",    alt: "Jung"    },
   { src: "/images/brands/berker-logo-wien.png",  alt: "Berker"  },
+  { src: "/images/brands/schneider-electric-logo-wien-elektriker.png", alt: "Schneider Electric" },
+  { src: "/images/brands/schrack-technik-logo-wien-elektriker.png", alt: "Schrack Technik" },
+  { src: "/images/brands/viko-logo-wien-elektriker.png", alt: "Viko" },
+  { src: "/images/brands/fermax-logo-wien-elektriker.png", alt: "Fermax" },
+  { src: "/images/brands/mersen-logo-wien-elektriker.png", alt: "Mersen" },
+  { src: "/images/brands/obo-betterman-logo-wien-elektriker.png", alt: "OBO Bettermann" },
 ];
 
 export default function OrbitBrands() {
@@ -124,9 +130,9 @@ export default function OrbitBrands() {
                 <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "8px" }} />
               </div>
 
-              {/* Inner orbit – 3 brands CCW – r=100 */}
-              {[brands[0], brands[1], brands[2]].map((b, i) => (
-                <OrbitItem key={b.alt} radius={100} duration={22} delay={-(i * 22 / 3)} reverse size={60}>
+              {/* Inner orbit – 4 brands CCW – r=100 */}
+              {brands.slice(0, 4).map((b, i) => (
+                <OrbitItem key={b.alt} radius={100} duration={22} delay={-(i * 22 / 4)} reverse size={60}>
                   <div style={{
                     width: "60px", height: "60px", borderRadius: "50%",
                     background: "white", border: "1.5px solid var(--border)",
@@ -140,9 +146,9 @@ export default function OrbitBrands() {
                 </OrbitItem>
               ))}
 
-              {/* Outer orbit – 2 brands CW – r=165 */}
-              {[brands[3], brands[4]].map((b, i) => (
-                <OrbitItem key={b.alt} radius={165} duration={34} delay={-(i * 34 / 2)} size={68}>
+              {/* Outer orbit – 7 brands CW – r=165 */}
+              {brands.slice(4).map((b, i) => (
+                <OrbitItem key={b.alt} radius={165} duration={34} delay={-(i * 34 / 7)} size={68}>
                   <div style={{
                     width: "68px", height: "68px", borderRadius: "50%",
                     background: "white", border: "1.5px solid var(--border)",
