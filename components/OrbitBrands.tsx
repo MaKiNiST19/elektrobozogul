@@ -121,43 +121,43 @@ export default function OrbitBrands() {
               <div style={{
                 position: "absolute", top: "50%", left: "50%",
                 transform: "translate(-50%,-50%)",
-                width: "72px", height: "72px", borderRadius: "50%",
+                width: "84px", height: "84px", borderRadius: "50%",
                 background: "white", border: "2px solid var(--border)",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 boxShadow: "0 8px 24px rgba(0,0,0,0.10)",
-                zIndex: 10, padding: "8px",
+                zIndex: 10, padding: "6px",
               }}>
-                <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "8px" }} />
+                <Image src="/images/logo.png" alt="Elektro-Bozogul" fill style={{ objectFit: "contain", padding: "6px" }} />
               </div>
 
               {/* Inner orbit – 4 brands CCW – r=100 */}
               {brands.slice(0, 4).map((b, i) => (
-                <OrbitItem key={b.alt} radius={100} duration={22} delay={-(i * 22 / 4)} reverse size={60}>
+                <OrbitItem key={b.alt} radius={100} duration={22} delay={-(i * 22 / 4)} reverse size={74}>
                   <div style={{
-                    width: "60px", height: "60px", borderRadius: "50%",
+                    width: "74px", height: "74px", borderRadius: "50%",
                     background: "white", border: "1.5px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    boxShadow: "0 4px 14px rgba(0,0,0,0.10)", padding: "9px",
+                    boxShadow: "0 4px 14px rgba(0,0,0,0.10)", padding: "5px",
                     position: "relative",
                     overflow: "hidden"
                   }}>
-                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "9px" }} />
+                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "5px" }} />
                   </div>
                 </OrbitItem>
               ))}
 
               {/* Outer orbit – 7 brands CW – r=165 */}
               {brands.slice(4).map((b, i) => (
-                <OrbitItem key={b.alt} radius={165} duration={34} delay={-(i * 34 / 7)} size={68}>
+                <OrbitItem key={b.alt} radius={165} duration={34} delay={-(i * 34 / 7)} size={86}>
                   <div style={{
-                    width: "68px", height: "68px", borderRadius: "50%",
+                    width: "86px", height: "86px", borderRadius: "50%",
                     background: "white", border: "1.5px solid var(--border)",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.11)", padding: "11px",
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.11)", padding: "7px",
                     position: "relative",
                     overflow: "hidden"
                   }}>
-                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "11px" }} />
+                    <Image src={b.src} alt={b.alt} fill style={{ objectFit: "contain", padding: "7px" }} />
                   </div>
                 </OrbitItem>
               ))}
