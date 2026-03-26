@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { BEZIRKE, type Bezirk } from '@/lib/bezirke';
@@ -73,10 +74,12 @@ export default function BezirkPage({ params }: { params: { bezirk: string } }) {
         {/* Background Image + Overlay */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           {hasBezirkImage && (
-            <img
+            <Image
               src={`/images/bezirke/${bezirkImgFile}`}
               alt={`${bezirk.name} Wien – ${bezirk.shortName}`}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
+              priority
             />
           )}
           {/* Dark Overlay */}
@@ -124,22 +127,27 @@ export default function BezirkPage({ params }: { params: { bezirk: string } }) {
 
           {/* CTA Buttons */}
           <div style={{ display: 'flex', gap: '16px', marginBottom: '40px', flexWrap: 'wrap' }}>
-            <a href="/kontakt" className="btn-primary" style={{
-              background: 'var(--yellow)', color: 'var(--primary)', padding: '14px 28px',
-              borderRadius: '12px', fontWeight: 700, fontSize: '15px', textDecoration: 'none',
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-            }}>
-              Kontakt aufnehmen
+            <a href="/kontakt" className="btn-sparkle">
+               <span className="text_button" style={{ 
+                 padding: '12px 28px', 
+                 fontSize: '15px', 
+                 background: 'var(--yellow)',
+                 color: 'var(--primary)',
+                 fontWeight: 800
+                }}>
+                 Kontakt aufnehmen
+               </span>
             </a>
-            <a href="tel:+436601230073" style={{
-              color: 'white', padding: '14px 28px',
-              borderRadius: '12px', fontWeight: 600, fontSize: '15px', textDecoration: 'none',
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255,255,255,0.2)',
-            }}>
-              📞 +43 660 1230073
+            <a href="tel:+436601230073" className="btn-sparkle">
+               <span className="text_button" style={{ 
+                 padding: '12px 28px', 
+                 fontSize: '15px',
+                 background: 'rgba(255,255,255,0.1)',
+                 color: 'white',
+                 backdropFilter: 'blur(8px)'
+                }}>
+                 📞 +43 660 1230073
+               </span>
             </a>
           </div>
 

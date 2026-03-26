@@ -28,7 +28,7 @@ export default function UeberUnsPage() {
 
       <section className="section">
         <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ maxWidth: 'var(--max-w)', margin: '0 auto' }}>
             <article className="prose">
               <h2>Wer wir sind</h2>
               <p>
@@ -39,6 +39,10 @@ export default function UeberUnsPage() {
               </p>
 
               <h2>Unsere Qualifikationen</h2>
+              <p>
+                Als in Wien etablierter Meisterbetrieb erfüllen wir alle gesetzlichen Anforderungen und setzen auf höchste Sicherheitsstandards.
+                Besonders wichtig ist uns die Mitgliedschaft in der Wirtschaftskammer Wien (WKO) und die ständige Weiterbildung unseres Teams.
+              </p>
               <ul>
                 <li><strong>Konzessionierter Meisterbetrieb</strong> – gemäß Elektrotechnikgesetz (ETG) und Gewerbeordnung</li>
                 <li><strong>Zertifizierte Fachkräfte</strong> – ausgebildet nach ÖVE/ÖNORM-Standards</li>
@@ -60,8 +64,7 @@ export default function UeberUnsPage() {
                     boxShadow: 'var(--shadow-sm)'
                   }}>
                     <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', lineHeight: 1.4 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                        <span style={{ color: 'var(--primary)', fontSize: '18px', fontWeight: 800 }}>✓</span>
+                      <div style={{ marginBottom: '12px' }}>
                         <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--primary)' }}>{item.title}</span>
                       </div>
                       <span style={{ fontSize: '14px', fontWeight: 500, opacity: 0.9, color: 'var(--primary)', lineHeight: 1.6 }}>{item.desc}</span>
@@ -73,22 +76,21 @@ export default function UeberUnsPage() {
               <h2 style={{ marginTop: '60px' }}>Einsatzgebiet</h2>
               <p>
                 Wir betreuen Privat- und Gewerbekunden in <strong>allen 23 Wiener Gemeindebezirken</strong> sowie im
-                näheren Umland. Dank effizienter Routenplanung sind wir schnell vor Ort – ob für geplante
+                näheren Umland (Bezirk Mödling, Korneuburg, etc.). Dank effizienter Routenplanung sind wir schnell vor Ort – ob für geplante
                 Projekte oder akute Notfälle.
               </p>
 
-              <div style={{ marginTop: '50px', background: 'var(--primary)', color: 'white', padding: '40px', borderRadius: 'var(--r-lg)', textAlign: 'center' }}>
+              <div style={{ marginTop: '50px', background: 'var(--primary)', color: 'white', padding: '60px 40px', borderRadius: 'var(--r-lg)', textAlign: 'center' }}>
                 <h2 style={{ color: 'var(--yellow)', marginBottom: '16px' }}>Jetzt Kontakt aufnehmen</h2>
-                <p style={{ color: 'rgba(255,255,255,.8)', marginBottom: '24px' }}>
-                  Sie haben ein Anliegen oder benötigen ein Angebot? Wir beraten Sie gerne.
+                <p style={{ color: 'rgba(255,255,255,.8)', marginBottom: '32px' }}>
+                  Sie haben ein Anliegen oder benötigen ein unverbindliches Angebot? Wir beraten Sie gerne telefonisch oder per E-Mail.
                 </p>
                 <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
                   <a href="tel:+436601230073" className="btn-sparkle" style={{ transform: 'scale(1.1)' }}>
                     <span className="text_button" style={{ background: 'var(--yellow)', color: 'var(--primary)', padding: '12px 32px' }}>☎ +43 660 1230073</span>
                   </a>
-                  <a href="/kontakt" className="btn-text-fill" style={{ fontSize: '15px' }}>
-                    <span className="actual-text">Zum Kontaktformular</span>
-                    <span aria-hidden="true" className="hover-text">Zum Kontaktformular</span>
+                  <a href="/kontakt" className="btn-sparkle" style={{ transform: 'scale(1.1)' }}>
+                    <span className="text_button" style={{ background: 'var(--white)', color: 'var(--primary)', padding: '12px 32px' }}>Zum Kontaktformular</span>
                   </a>
                 </div>
               </div>

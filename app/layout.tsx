@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -38,11 +39,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="navbar">
             <div className="navbar__inner">
                <a href="/" className="navbar__logo">
-                  <img
+                  <Image
                     src="/images/logo.png"
                     alt="Elektro-Bozogul"
-                    className="navbar__logo-img"
+                    width={180}
+                    height={40}
                     style={{ height: '40px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                    priority
                   />
                </a>
 
@@ -108,9 +111,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {/* Brand Section */}
               <div>
                 <div style={{ marginBottom: '20px' }}>
-                  <img
+                  <Image
                     src="/images/logo.png"
                     alt="Elektro-Bozogul"
+                    width={180}
+                    height={40}
                     style={{ height: '40px', width: 'auto', objectFit: 'contain', display: 'block', filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -160,12 +165,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h4 style={{ color: 'white', fontWeight: 700, fontSize: '12px', letterSpacing: '0.05em', marginBottom: '16px', textTransform: 'uppercase' }}>Unternehmen</h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   {[
-                    { label: 'Über uns', href: '/uber-uns' },
+                    { label: 'Über uns', href: '/ueber-uns' },
                     { label: 'Ratgeber', href: '/ratgeber' },
                     { label: 'Blog', href: '/blog' },
                     { label: 'Kontakt', href: '/kontakt' },
+                    { label: 'WKO Profil', href: 'https://firmen.wko.at/elektro-bozogul/wien' },
                   ].map((item) => (
-                    <li key={item.label}><a href={item.href} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', textDecoration: 'none' }}>{item.label}</a></li>
+                    <li key={item.label}><a href={item.href} target={item.label === 'WKO Profil' ? '_blank' : undefined} rel={item.label === 'WKO Profil' ? 'noopener noreferrer' : undefined} style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', textDecoration: 'none' }}>{item.label}</a></li>
                   ))}
                 </ul>
               </div>
