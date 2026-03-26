@@ -1,0 +1,27 @@
+{
+  "name": "elektro-bozogul",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "npx tsx scripts/generate-content.ts",
+    "generate:missing": "npx tsx scripts/generate-content.ts --only-missing",
+    "generate:bezirk": "npx tsx scripts/generate-content.ts --bezirk="
+  },
+  "dependencies": {
+    "next": "^14.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "tsx": "^4.7.0",
+    "typescript": "^5"
+  }
+}
