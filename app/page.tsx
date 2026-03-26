@@ -9,8 +9,8 @@ import { BadgeGroup } from '../components/base/badges/badge-groups';
 import OrbitBrands from '../components/OrbitBrands';
 
 export const metadata: Metadata = {
-  title: 'Elektro-Bozogul | Ihr Elektriker in Wien – 24h Notdienst',
-  description: 'Ihr zuverlässiger Elektriker in Wien. 24h Notdienst, Elektroinstallationen, E-Befund, Photovoltaik und Smart Home. Schnell & kompetent in allen Bezirken.',
+  title: 'Elektro-Bozogul | Ihr Elektriker in Wien & Umgebung – 24h Notdienst',
+  description: 'Ihr zuverlässiger Elektriker in Wien & Umgebung. 24h Notdienst, Elektroinstallationen, E-Befund, Photovoltaik und Smart Home. Schnell & kompetent vor Ort.',
   alternates: {
     canonical: 'https://elektro-bozogul.at',
   },
@@ -64,16 +64,14 @@ export default function Home() {
         />
         <div className="hero__overlay" />
         <div className="hero__content">
-          <span className="hero__eyebrow">Ihr Elektriker-Meisterbetrieb in Wien</span>
+          <span className="hero__eyebrow">⚡ Zertifizierter Meisterbetrieb in Wien</span>
           <h1>
-            Elektriker Wien für{' '}
-            <em>Elektroinstallation</em>,<br />
-            E-Befund und Notdienst
+            Ihr zuverlässiger <em>Elektriker in Wien</em> & Umgebung
           </h1>
           <p className="hero__sub">
-            Elektro-Bozogul ist Ihr erfahrener Elektriker-Meisterbetrieb in Wien.
-            Wir übernehmen Elektroinstallationen, rechtssichere E-Befunde und
-            schnelle Hilfe bei Störungen – in allen 23 Bezirken.
+            Als Ihr verlässlicher Meisterbetrieb sorgen wir für sichere Elektroinstallationen, 
+            E-Befunde und schnellen Störungsdienst – kompetent, freundlich und 
+            stets in Ihrer Nähe für Sie im Einsatz.
           </p>
           <div className="hero__btns">
             <a href="/leistungen" className="btn-sparkle">
@@ -174,7 +172,7 @@ export default function Home() {
             <div>
               <p className="eyebrow" style={{ letterSpacing: '0.1em', fontSize: '11px' }}>Verlässlichkeit, schnelle Hilfe und klare Kommunikation</p>
               <h2 style={{ marginBottom: '20px' }}>
-                Ihr verlässlicher Elektriker in Wien – für Notdienst, Installation und E-Befund
+                Ihr verlässlicher Elektriker in Wien & Umgebung – für Notdienst, Installation und E-Befund
               </h2>
               <p style={{ marginBottom: '16px', color: 'var(--mid)' }}>
                 Elektro-Bozogul ist Ihr Ansprechpartner für fachgerechte Elektroarbeiten in Wien.
