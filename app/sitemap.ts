@@ -32,15 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Bezirk × Leistung kombinasyonları (138 sayfa)
-  const comboPages: MetadataRoute.Sitemap = BEZIRKE.flatMap(b =>
-    LEISTUNGEN.map(l => ({
-      url: `${baseUrl}/bezirke/${b.slug}/${l.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.75,
-    }))
-  );
+  // Bezirk × Leistung sayfaları noindex olarak işaretlendi – sitemap'den çıkarıldı
+  // Bu sayfalar scaled content abuse riski nedeniyle Google'dan gizlendi
 
   // Çevre bölge sayfaları
   const umgebungPages: MetadataRoute.Sitemap = UMGEBUNG.map(o => ({
@@ -54,7 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...leistungPages,
     ...bezirkPages,
-    ...comboPages,
     ...umgebungPages,
   ];
 }

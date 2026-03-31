@@ -22,6 +22,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  openGraph: {
+    type: 'website',
+    locale: 'de_AT',
+    url: 'https://elektro-bozogul.at',
+    siteName: 'Elektro-Bozogul',
+    title: 'Elektro-Bozogul | Ihr Elektriker in Wien – 24h Notdienst',
+    description: 'Ihr zuverlässiger Elektriker in Wien. 24h Notdienst, Elektroinstallationen, E-Befund, Photovoltaik und Smart Home. Meisterbetrieb für alle 23 Bezirke.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Elektro-Bozogul – Ihr Elektriker in Wien',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Elektro-Bozogul | Elektriker Wien – 24h Notdienst',
+    description: 'Meisterbetrieb für Elektroinstallation, E-Befund & Notdienst in allen 23 Wiener Bezirken.',
+    images: ['/images/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

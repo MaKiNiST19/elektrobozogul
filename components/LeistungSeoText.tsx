@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { type Leistung } from '@/lib/leistungen';
-import { BEZIRKE } from '@/lib/bezirke';
 
 interface SeoSection {
   title: string;
@@ -299,17 +298,16 @@ export default function LeistungSeoText({ leistung }: { leistung: Leistung }) {
             </div>
 
             <div style={{ marginTop: '64px', padding: '40px', background: 'var(--bg)', borderRadius: '24px', border: '1px solid var(--border)' }}>
-              <h3 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '24px' }}>Meister-Expertise für ganz Wien</h3>
-              <p style={{ marginBottom: '24px' }}>
-                Elektro-Bozogul ist stolz darauf, in allen 23 Wiener Gemeindebezirken tätig zu sein. Von den inneren Bezirken wie 1010 bis zu den großen Flächenbezirken wie 1210 oder 1220 – wir kennen die Wiener Bausubstanz genau.
+              <h3 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '24px' }}>Warum Elektro-Bozogul für {leistung.shortTitle}?</h3>
+              <p style={{ marginBottom: '16px' }}>
+                Als konzessionierter Meisterbetrieb und Mitglied der Wirtschaftskammer Wien (WKO) setzen wir bei {leistung.title.toLowerCase()} auf höchste Qualitätsstandards. 
+                Alle Arbeiten werden nach ÖVE/ÖNORM dokumentiert, und wir verwenden ausschließlich Material von namhaften Herstellern wie Schrack Technik, Legrand, Hager und Eaton.
               </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                {BEZIRKE.slice(0, 10).map(b => (
-                  <a key={b.slug} href={`/bezirke/${b.slug}`} style={{ fontSize: '12px', padding: '6px 12px', background: 'white', border: '1px solid var(--border)', borderRadius: '30px', textDecoration: 'none', color: 'var(--mid)' }}>
-                    Elektriker {b.name}
-                  </a>
-                ))}
-              </div>
+              <p>
+                Kontaktieren Sie uns für ein kostenfreies Beratungsgespräch zu Ihrem {leistung.shortTitle}-Projekt:
+                {' '}<strong style={{ color: 'var(--primary)' }}>+43 660 1230073</strong> oder{' '}
+                <a href="mailto:office@elektro-bozogul.at" style={{ color: 'var(--primary)' }}>office@elektro-bozogul.at</a>
+              </p>
             </div>
           </div>
 

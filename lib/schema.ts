@@ -1,4 +1,4 @@
-import { BEZIRKE, type Bezirk } from './bezirke';
+import { type Bezirk } from './bezirke';
 import type { Leistung } from './leistungen';
 
 const FIRMA = {
@@ -14,7 +14,7 @@ const FIRMA = {
 export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Electrician",
     "@id": `${FIRMA.url}/#business`,
     "name": FIRMA.name,
     "url": FIRMA.url,
@@ -23,13 +23,16 @@ export function generateOrganizationSchema() {
     "logo": `${FIRMA.url}/images/logo.png`,
     "image": `${FIRMA.url}/images/logo.png`,
     "description": "Ihr Elektriker in Wien – alle 23 Bezirke. Elektroinstallation, E-Befund, Notdienst, Photovoltaik, Smart Home und E-Mobilität.",
+    "slogan": "Meisterhafte Elektrotechnik für Wien",
     "sameAs": [
-      "https://instagram.com/elektrobozogul"
+      "https://instagram.com/elektrobozogul",
+      "https://firmen.wko.at/elektro-bozogul/wien"
     ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Wien",
       "addressRegion": "Wien",
+      "postalCode": "1100",
       "addressCountry": "AT"
     },
     "geo": {
@@ -37,11 +40,32 @@ export function generateOrganizationSchema() {
       "latitude": 48.2082,
       "longitude": 16.3738
     },
-    "areaServed": BEZIRKE.map(b => ({
+    "areaServed": {
       "@type": "City",
-      "name": `Wien ${b.name}`,
-      "postalCode": b.plz
-    })),
+      "name": "Wien",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "Austria"
+      }
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Meisterbetrieb",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Wirtschaftskammer Wien (WKO)"
+      }
+    },
+    "knowsAbout": [
+      "Elektroinstallation",
+      "E-Befund",
+      "Elektriker Notdienst",
+      "Photovoltaik",
+      "Smart Home",
+      "KNX",
+      "Wallbox Installation",
+      "Elektrosanierung"
+    ],
     "priceRange": "€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Cash, Credit Card, Bank Transfer",

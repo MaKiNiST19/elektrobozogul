@@ -22,6 +22,12 @@ export async function generateMetadata({ params }: { params: { leistung: string 
     title: leistung.title.includes('Wien') ? leistung.title : `${leistung.title} Wien | Elektro-Bozogul`,
     description: `${leistung.description} Befugter Elektriker in Wien. Installation & Beratung nach ÖNORM. ☎ +43 660 1230073`,
     alternates: { canonical: `https://elektro-bozogul.at/leistungen/${leistung.slug}` },
+    openGraph: {
+      title: leistung.title.includes('Wien') ? leistung.title : `${leistung.title} Wien | Elektro-Bozogul`,
+      description: leistung.description,
+      url: `https://elektro-bozogul.at/leistungen/${leistung.slug}`,
+      images: [{ url: leistung.image, alt: leistung.title }],
+    },
   };
 }
 

@@ -14,6 +14,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://elektro-bozogul.at',
   },
+  openGraph: {
+    title: 'Elektro-Bozogul | Ihr Elektriker in Wien – 24h Notdienst',
+    description: 'Meisterbetrieb für Elektroinstallation, E-Befund & Notdienst in allen 23 Wiener Bezirken. Schnell & kompetent vor Ort.',
+    url: 'https://elektro-bozogul.at',
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630, alt: 'Elektro-Bozogul – Elektriker Wien' }],
+  },
 };
 
 export default function Home() {
@@ -170,19 +176,19 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', marginBottom: '48px' }} className="about-grid">
             <div>
-              <p className="eyebrow" style={{ letterSpacing: '0.1em', fontSize: '11px' }}>Verlässlichkeit, schnelle Hilfe und klare Kommunikation</p>
+              <p className="eyebrow" style={{ letterSpacing: '0.1em', fontSize: '11px' }}>Inhabergeführt seit der Gründung</p>
               <h2 style={{ marginBottom: '20px' }}>
-                Ihr verlässlicher Elektriker in Wien & Umgebung – für Notdienst, Installation und E-Befund
+                Vom Ein-Mann-Betrieb zum Wiener Meisterbetrieb – unsere Geschichte
               </h2>
               <p style={{ marginBottom: '16px', color: 'var(--mid)' }}>
-                Elektro-Bozogul ist Ihr Ansprechpartner für fachgerechte Elektroarbeiten in Wien.
-                Als stolzes Mitglied der <a href="https://firmen.wko.at/elektro-bozogul/wien" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>Wirtschaftskammer Wien (WKO)</a> betreuen wir Privatkunden, Unternehmen und Hausverwaltungen mit sauberer
-                Ausführung, verlässlicher Terminabstimmung und klarer Kommunikation.
+                Elektro-Bozogul wurde mit einer klaren Vision gegründet: Elektrotechnik auf Meisterniveau, 
+                gepaart mit ehrlicher Kommunikation und fairen Konditionen. 
+                Als Mitglied der <a href="https://firmen.wko.at/elektro-bozogul/wien" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>Wirtschaftskammer Wien (WKO)</a> stehen wir für geprüfte Qualität.
               </p>
               <p style={{ color: 'var(--mid)' }}>
-                Von Altbauwohnungen bis zu modernen Objekten in den Wiener Bezirken
-                übernehmen wir Elektroarbeiten mit Fokus auf Sicherheit, Nachvollziehbarkeit
-                und alltagstaugliche Lösungen. Auch im Notfall sind wir rasch erreichbar.
+                Heute betreuen wir Privathaushalte, Gewerbebetriebe und Hausverwaltungen in allen 23 Wiener Bezirken.
+                Unser Ansatz ist dabei immer gleich: Zuerst zuhören, dann beraten, erst dann arbeiten.
+                Das Ergebnis sind Elektroinstallationen, die funktionieren – heute und in 20 Jahren.
               </p>
             </div>
             <div style={{ position: 'relative', height: '420px', width: '100%' }}>
@@ -211,12 +217,12 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }} className="feature-cards-grid">
             {[
-              { title: '7/24 Elektriker in Wien', desc: 'Auch bei Stromausfall oder akuten Defekten sind wir in Wien schnell erreichbar.' },
-              { title: 'In allen 23 Bezirken im Einsatz', desc: 'Von der Inneren Stadt bis Donaustadt betreuen wir Kunden in ganz Wien.' },
-              { title: 'Klare Preisstruktur', desc: 'Wir kommunizieren Aufwand und Kosten nachvollziehbar und ohne Unklarheit.' },
-              { title: 'Für Privat, Gewerbe & Hausverwaltung', desc: 'Verlässliche Elektroarbeiten für Wohnungen, Betriebe und verwaltete Objekte.' },
-              { title: 'Fachgerechte Elektroinstallation', desc: 'Saubere Ausführung bei Neuinstallation, Erweiterung und Modernisierung.' },
-              { title: 'E-Befund und Prüfung', desc: 'Prüfung und Dokumentation Ihrer Anlage nach ÖNORM.' },
+              { title: 'Ø 45 Min. Reaktionszeit', desc: 'Unsere Einsatzfahrzeuge sind strategisch in Wien positioniert für schnellste Hilfe.' },
+              { title: 'WKO-geprüfter Meisterbetrieb', desc: 'Konzessionierter Fachbetrieb mit vollständiger Befugnis für alle Elektroarbeiten.' },
+              { title: 'Festpreis-Garantie', desc: 'Keine versteckten Kosten – Sie erhalten vor Arbeitsbeginn ein verbindliches Angebot.' },
+              { title: 'Privat, Gewerbe & Hausverwaltung', desc: 'Branchenübergreifende Erfahrung von der Altbauwohnung bis zum Bürokomplex.' },
+              { title: 'Normgerecht nach ÖVE/ÖNORM', desc: 'Jede Installation wird dokumentiert und entspricht den aktuellen Sicherheitsstandards.' },
+              { title: 'Materialien führender Hersteller', desc: 'Wir verbauen ausschließlich Qualitätsprodukte von Schrack, Legrand, Hager und Eaton.' },
             ].map((card) => (
               <div key={card.title} style={{
                 background: 'white', border: '1px solid var(--border)', borderRadius: '12px', padding: '20px 22px',
@@ -267,15 +273,15 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="eyebrow">Leistungsübersicht</p>
+              <p className="eyebrow">So arbeiten wir</p>
               <h2 style={{ marginBottom: '16px' }}>
-                Dienstleistungen, die wir im Bereich <em style={{ color: 'var(--primary)', fontStyle: 'normal' }}>Elektroberatung</em> anbieten
+                Vom <em style={{ color: 'var(--primary)', fontStyle: 'normal' }}>Erstgespräch</em> bis zur fertigen Anlage – unser Ablauf
               </h2>
               <p style={{ color: 'var(--mid)', marginBottom: '28px' }}>
-                Unser Elektriker Notdienst in Wien steht Ihnen in allen Bereichen der Elektrotechnik zur Verfügung:
+                Bei jedem Auftrag folgen wir einem klaren Prozess, der Qualität und Transparenz sicherstellt:
               </p>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                {['Stromausfall-Behebung (Wohnung, Haus, Gewerbe)', 'FI-Schalter & Sicherungen prüfen oder ersetzen', 'Kurzschluss-Suche & Leitungsreparaturen', 'Anschluss von Haushalts- & Küchengeräten', 'Elektroinstallationen & Renovierungen', 'Beleuchtung & Stromverteilung prüfen'].map((item) => (
+                {['① Telefonische Erstberatung & Terminvereinbarung', '② Vor-Ort-Analyse der bestehenden Installation', '③ Verbindliches Festpreis-Angebot', '④ Fachgerechte Ausführung nach ÖVE/ÖNORM', '⑤ Funktionsprüfung & Dokumentation', '⑥ Übergabe mit persönlicher Einweisung'].map((item) => (
                   <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ minWidth: '20px', flexShrink: 0, marginTop: '2px' }}>
                       <polyline points="20 6 9 17 4 12"></polyline>

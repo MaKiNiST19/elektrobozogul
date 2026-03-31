@@ -9,7 +9,7 @@ import { BadgeGroup } from '@/components/base/badges/badge-groups';
 import { RatingBadge } from '@/components/foundations/rating-badge';
 import { PolaroidCard } from '@/components/base/polaroid-card';
 import BrandCarousel from '@/components/foundations/BrandCarousel';
-import BezirkLeistungSeoText from '@/components/BezirkLeistungSeoText';
+// BezirkLeistungSeoText removed – thin content risk (scaled content abuse)
 import path from 'path';
 import fs from 'fs';
 
@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: { bezirk: string; l
     title: `${leistung.title} ${bezirk.name} ${bezirk.plz} Wien`,
     description: `${leistung.shortTitle} im ${bezirk.shortName} Wien (${bezirk.plz}) von Elektro-Bozogul. Befugter Gewerbebetrieb. Gratis Kostenvoranschlag. ☎ +43 660 1230073`,
     alternates: { canonical: `https://elektro-bozogul.at/bezirke/${bezirk.slug}/${leistung.slug}` },
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 
@@ -281,8 +285,6 @@ export default function BezirkLeistungPage({ params }: { params: { bezirk: strin
         </div>
       </section>
 
-      {/* Unique SEO content (>1000 Words) */}
-      <BezirkLeistungSeoText bezirk={bezirk} leistung={leistung} />
     </>
   );
 }
