@@ -253,10 +253,10 @@ export default function LeistungDetailPage({ params }: { params: { leistung: str
           <h2 style={{ fontSize: '2rem', marginBottom: '16px' }}>Vor Ort in ganz Wien</h2>
           <p style={{ maxWidth: '700px', margin: '0 auto 48px', color: 'var(--mid)' }}>Wir sind stolz auf unsere Arbeit. Hier finden Sie ein paar Eindrücke von unseren elektrotechnischen Arbeiten in verschiedenen Wiener Bezirken.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px' }}>
-            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst.jpg" caption={`Elektro-Service in ${leistung.shortTitle}`} rotation={-2} />
-            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst1.jpg" caption="Meisterqualität vor Ort" rotation={1.5} />
-            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst2.jpg" caption="Sicher & Normgerecht" rotation={-1} />
-            <PolaroidCard imageUrl="/images/gallery/wien-elektriker-notdienst3.jpg" caption="Ihr lokaler Partner" rotation={2} />
+            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst4.jpg" caption={`Elektro-Service in ${leistung.shortTitle}`} rotation={-2} />
+            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst1.jpg" caption="Meisterqualität vor Ort" rotation={1.5} />
+            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst2.jpg" caption="Sicher & Normgerecht" rotation={-1} />
+            <PolaroidCard imageUrl="/images/gallery/wien elektriker notdienst3.jpg" caption="Ihr lokaler Partner" rotation={2} />
           </div>
         </div>
       </section>
