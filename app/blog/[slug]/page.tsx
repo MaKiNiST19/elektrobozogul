@@ -41,7 +41,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
              <article className="prose" dangerouslySetInnerHTML={{ __html: post.content }} />
              
              <div style={{ marginTop: '80px', padding: '40px', background: 'var(--bg)', borderRadius: '20px', border: '1px solid var(--border)', textAlign: 'center' }}>
-                <h3 style={{ marginBottom: '16px', fontSize: '1.4rem' }}>Haben Sie Fragen veya ein Projekt in Wien?</h3>
+                <h3 style={{ marginBottom: '16px', fontSize: '1.4rem' }}>Haben Sie Fragen oder ein Projekt in Wien?</h3>
                 <p style={{ marginBottom: '32px' }}>Wir beraten Sie gerne zu allen elektrotechnischen Anliegen im Bereich Wien und Umgebung.</p>
                 <a href="/kontakt" className="btn-sparkle" style={{ transform: 'scale(1.1)' }}>
                    <span className="text_button" style={{ background: 'var(--yellow)', color: 'var(--primary)', padding: '12px 32px' }}>☎ +43 660 1230073</span>

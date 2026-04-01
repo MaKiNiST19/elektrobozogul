@@ -1506,7 +1506,7 @@ body {
 .polaroid-wrapper .photo {
   width: 100%;
   aspect-ratio: 1/1;
-  background: #e0e0e0;
+  background: #fff;
   position: relative;
   overflow: hidden;
 }

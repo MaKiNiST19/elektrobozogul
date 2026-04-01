@@ -11,12 +11,12 @@ export const PolaroidCard: React.FC<PolaroidCardProps> = ({ imageUrl, caption, r
   return (
     <div className="polaroid-wrapper">
       <div className="polaroid" style={{ transform: `rotate(${rotation}deg)` } as any}>
-        <div className="photo" style={{ position: 'relative', height: '200px', width: '200px', overflow: 'hidden' }}>
+        <div className="photo" style={{ position: 'relative', overflow: 'hidden', width: '100%' }}>
           <Image
             src={imageUrl}
             alt={caption}
             fill
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'contain' }}
             className="photo-img"
           />
           <div className="dust" />

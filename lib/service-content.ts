@@ -76,7 +76,7 @@ export const SERVICE_CONTENT: Record<string, string> = {
     <ul>
         <li><strong>Vermieter:</strong> Schutz vor Haftung bei Mieterwechseln.</li>
         <li><strong>Hausverwaltungen:</strong> Regelmäßige Überprüfung der Allgemeinanlagen im Stiegenhaus (Notbeleuchtung etc.).</li>
-        <li><strong>Immobilienkäufer:</strong> Prüfung vor dem Kauf in Bezirken wie <strong>Meidling (1120)</strong> veya <strong>Liesing (1230)</strong>.</li>
+        <li><strong>Immobilienkäufer:</strong> Prüfung vor dem Kauf in Bezirken wie <strong>Meidling (1120)</strong> oder <strong>Liesing (1230)</strong>.</li>
         <li><strong>Betriebsanlagen:</strong> Gesetzlich vorgeschriebene Intervalle für Gewerbebetriebe.</li>
     </ul>
 
@@ -103,48 +103,48 @@ export const SERVICE_CONTENT: Record<string, string> = {
 
     <h3>Vorteile für Hausverwalter</h3>
     <ul>
-        <li><strong>Schnelle Reaktionszeit:</strong> Notdienst für Mieter bei Stromausfällen im gesamten <strong>Bezirk Favoriten (1100)</strong> ve Umgebung.</li>
-        <li><strong>Allgemeinanlagen-Wartung:</strong> Stiegenhausbeleuchtung, Sprechanlagen ve Notlichtsysteme.</li>
-        <li><strong>Rechtssicherheit:</strong> Terminüberwachung für fällige E-Befunde ve Prüfprotokolle nach ÖNORM.</li>
+        <li><strong>Schnelle Reaktionszeit:</strong> Notdienst für Mieter bei Stromausfällen im gesamten <strong>Bezirk Favoriten (1100)</strong> und Umgebung.</li>
+        <li><strong>Allgemeinanlagen-Wartung:</strong> Stiegenhausbeleuchtung, Sprechanlagen und Notlichtsysteme.</li>
+        <li><strong>Rechtssicherheit:</strong> Terminüberwachung für fällige E-Befunde und Prüfprotokolle nach ÖNORM.</li>
         <li><strong>Direkte Abwicklung:</strong> Wir koordinieren Termine auf Wunsch direkt mit Ihren Mietern.</li>
     </ul>
     
-    <p>Ob Zinshaus in <strong>Ottakring (1160)</strong> veya moderne Wohnanlage in der <strong>Donaustadt (1220)</strong> – wir betreuen Ihr Portfolio kompetent.</p>
+    <p>Ob Zinshaus in <strong>Ottakring (1160)</strong> oder moderne Wohnanlage in der <strong>Donaustadt (1220)</strong> – wir betreuen Ihr Portfolio kompetent.</p>
   `,
   "sanierung-modernisierung-wien": `
     <h2>Elektrosanierung Wien: Sicherheit und Werterhaltung für Ihren Altbau</h2>
     <p>Veraltete Elektroanlagen sind eine Gefahr. Besonders in Wiener Altbauten (Bezirke 1020-1090) finden sich oft Installationen, die nicht mehr zeitgemäß sind. Elektro-Bozogul ist Ihr Spezialist für die <strong>Modernisierung von Elektroanlagen in Wien</strong>.</p>
 
     <h3>Wann ist eine Sanierung nötig?</h3>
-    <p>Wenn Sicherheitsmerkmale wie FI-Schutzschalter fehlen, Leitungen spröde sind (Stoffisolierung) oder Sicherungen häufig ohne Grund auslösen, besteht Handlungsbedarf. Eine Sanierung schützt vor Kabelbrand ve steigert den Immobilienwert in <strong>Währing (1180)</strong> oder <strong>Döbling (1190)</strong>.</p>
+    <p>Wenn Sicherheitsmerkmale wie FI-Schutzschalter fehlen, Leitungen spröde sind (Stoffisolierung) oder Sicherungen häufig ohne Grund auslösen, besteht Handlungsbedarf. Eine Sanierung schützt vor Kabelbrand und steigert den Immobilienwert in <strong>Währing (1180)</strong> oder <strong>Döbling (1190)</strong>.</p>
 
     <h3>Staubarme Ausführung</h3>
-    <p>Wir nutzen modernste Technik für staubarmes Fräsen ve Schlitzen, um die Belastung während der Bauphase minimal zu halten. Wir sanieren Ihre Anlage komplett – vom Zählerkasten bis zur letzten Steckdose.</p>
+    <p>Wir nutzen modernste Technik für staubarmes Fräsen und Schlitzen, um die Belastung während der Bauphase minimal zu halten. Wir sanieren Ihre Anlage komplett – vom Zählerkasten bis zur letzten Steckdose.</p>
   `,
   "photovoltaik-solar-wien": `
     <h2>Photovoltaik Wien: Saubere Energie und Unabhängigkeit vom eigenen Dach</h2>
-    <p>Die Sonne schickt uns keine Rechnung. Immer mehr Hausbesitzer in den Wiener Flächenbezirken wie <strong>Donaustadt (1220)</strong> setzen auf <strong>PV-Anlagen</strong>, um ihre Energiekosten zu senken. Elektro-Bozogul ist Ihr Partner für Planung ve Montage.</p>
+    <p>Die Sonne schickt uns keine Rechnung. Immer mehr Hausbesitzer in den Wiener Flächenbezirken wie <strong>Donaustadt (1220)</strong> setzen auf <strong>PV-Anlagen</strong>, um ihre Energiekosten zu senken. Elektro-Bozogul ist Ihr Partner für Planung und Montage.</p>
 
     <h3>Lösungen für Wien</h3>
     <ul>
         <li><strong>PV-Dachanlagen:</strong> Maximale Effizienz durch individuelle Belegung.</li>
         <li><strong>Batteriespeicher:</strong> Nutzen Sie Ihren Strom auch wenn die Sonne nicht scheint.</li>
-        <li><strong>Balkonkraftwerke:</strong> Die ideale Lösung für Wohnungen in <strong>Floridsdorf (1210)</strong> veya <strong>Simmering (1110)</strong>.</li>
+        <li><strong>Balkonkraftwerke:</strong> Die ideale Lösung für Wohnungen in <strong>Floridsdorf (1210)</strong> oder <strong>Simmering (1110)</strong>.</li>
         <li><strong>Netzanmeldung:</strong> Wir übernehmen die Abwicklung mit den Wiener Netzen.</li>
     </ul>
   `,
   "e-mobilitaet-wallbox-wien": `
     <h2>Wallbox-Installation Wien: Bequemes Laden für Ihr Elektroauto</h2>
-    <p>E-Mobilität ist die Zukunft. Ob Privathaus in <strong>Hietzing (1130)</strong> veya Tiefgaragenplatz in <strong>Simmering (1110)</strong> – eine eigene Wallbox ist der komfortabelste Weg zum Laden. Wir installieren Ihre Ladestation fachgerecht.</p>
+    <p>E-Mobilität ist die Zukunft. Ob Privathaus in <strong>Hietzing (1130)</strong> oder Tiefgaragenplatz in <strong>Simmering (1110)</strong> – eine eigene Wallbox ist der komfortabelste Weg zum Laden. Wir installieren Ihre Ladestation fachgerecht.</p>
 
     <h3>Sicherheit im Fokus</h3>
-    <p>Wir prüfen Ihren Hausanschluss, installieren die notwendigen Zuleitungen ve spezielle Sicherungen (FI Typ B). Wir installieren Marken-Wallboxen ve sorgen für die notwendigen Schutzmaßnahmen nach ÖNORM.</p>
+    <p>Wir prüfen Ihren Hausanschluss, installieren die notwendigen Zuleitungen und spezielle Sicherungen (FI Typ B). Wir installieren Marken-Wallboxen und sorgen für die notwendigen Schutzmaßnahmen nach ÖNORM.</p>
   `,
   "smart-home-knx-wien": `
     <h2>Smart Home Wien: Mehr Komfort und Effizienz durch Hausautomation</h2>
-    <p>Ein intelligentes Haus denkt mit. Mit <strong>Smart Home ve KNX Lösungen in Wien</strong> steigern Sie Ihren Wohnkomfort ve senken Energiekosten. Wir vernetzen Ihre Technik optimal.</p>
+    <p>Ein intelligentes Haus denkt mit. Mit <strong>Smart Home und KNX Lösungen in Wien</strong> steigern Sie Ihren Wohnkomfort und senken Energiekosten. Wir vernetzen Ihre Technik optimal.</p>
 
     <h3>Vernetzung nach Maß</h3>
-    <p>Vom automatisierten Licht bis zur Heizungssteuerung per App – wir finden die richtige Lösung für Ihren Neubau oder Ihre Sanierung in <strong>Döbling (1190)</strong> oder <strong>Neubau (1070)</strong>. Sicherheit, Komfort ve Effizienz aus einer Hand.</p>
+    <p>Vom automatisierten Licht bis zur Heizungssteuerung per App – wir finden die richtige Lösung für Ihren Neubau oder Ihre Sanierung in <strong>Döbling (1190)</strong> oder <strong>Neubau (1070)</strong>. Sicherheit, Komfort und Effizienz aus einer Hand.</p>
   `,
 };

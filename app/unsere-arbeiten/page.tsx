@@ -15,6 +15,13 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
+  // Newly added Notdienst images
+  { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst1.jpeg', caption: 'Notdienst Einsatz', category: 'Notdienst' },
+  { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst2.jpeg', caption: 'Stromausfall Behebung', category: 'Notdienst' },
+  { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst3.jpeg', caption: 'Notsicherung', category: 'Notdienst' },
+  { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst4.jpeg', caption: 'Fehlersuche', category: 'Notdienst' },
+  { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst5.jpeg', caption: 'Sicherheits-Check', category: 'Notdienst' },
+
   { src: '/images/gallery/wien elektriker notdienst1.jpg',  caption: 'Verteilerkasten-Erneuerung', category: 'Installation' },
   { src: '/images/gallery/wien elektriker notdienst2.jpg',  caption: 'FI-Schalter Montage', category: 'Sicherheit' },
   { src: '/images/gallery/wien elektriker notdienst3.jpg',  caption: 'Altbau-Elektrosanierung', category: 'Sanierung' },
