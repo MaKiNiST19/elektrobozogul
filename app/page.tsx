@@ -174,7 +174,7 @@ export default function Home() {
 
       <section className="section" style={{ background: '#f8fafc', paddingTop: '80px', paddingBottom: '60px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center', marginBottom: '48px' }} className="about-grid">
+          <div className="about-grid" style={{ marginBottom: '48px' }}>
             <div>
               <p className="eyebrow" style={{ letterSpacing: '0.1em', fontSize: '11px' }}>Inhabergeführt seit der Gründung</p>
               <h2 style={{ marginBottom: '20px' }}>
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }} className="feature-cards-grid">
+          <div className="feature-cards-grid">
             {[
               { title: 'Ø 45 Min. Reaktionszeit', desc: 'Unsere Einsatzfahrzeuge sind strategisch in Wien positioniert für schnellste Hilfe.' },
               { title: 'WKO-geprüfter Meisterbetrieb', desc: 'Konzessionierter Fachbetrieb mit vollständiger Befugnis für alle Elektroarbeiten.' },
@@ -262,7 +262,7 @@ export default function Home() {
 
       <section className="section" style={{ background: 'var(--white)', paddingTop: '80px', paddingBottom: '80px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }} className="dienst-grid">
+          <div className="dienst-grid">
             <div style={{ position: 'relative', height: '460px' }}>
               <Image
                 src="/images/gallery/wien elektriker notdienst1.jpg"
@@ -302,7 +302,7 @@ export default function Home() {
             <h2>Unternehmen, Hausverwaltungen und Kunden setzen auf Elektro-Bozogul</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'start' }} className="reviews-grid">
+          <div className="reviews-grid">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {[
                 { name: 'Thomas K.', text: 'Sehr kompetent und schnell. Nach dem Stromausfall war das Team innerhalb von 45 Minuten vor Ort.', stars: 5 },
@@ -344,7 +344,7 @@ export default function Home() {
 
       <section className="section" style={{ background: 'var(--white)', paddingTop: '80px', paddingBottom: '80px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }} className="ebefund-grid">
+          <div className="ebefund-grid">
             <div style={{ position: 'relative', height: '380px' }}>
               <Image
                 src="/images/leistungen/Rechtssicherer-E-Befund-wien.jpg"
@@ -381,7 +381,7 @@ export default function Home() {
 
       <section className="section" style={{ background: 'var(--white)', paddingTop: '80px', paddingBottom: '80px' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px', marginBottom: '60px' }}>
+          <div className="bezirke-grid-home" style={{ marginBottom: '60px' }}>
             {BEZIRKE.map((b) => (
               <a key={b.slug} href={`/bezirke/${b.slug}`} style={{ textDecoration: 'none' }}>
                 <BadgeGroup addonText={b.plz} color="brand" theme="modern" size="md">
@@ -412,7 +412,7 @@ export default function Home() {
       <section className="section--sm" style={{ background: '#f8fafc', padding: '80px 0' }}>
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: '48px' }}>Häufig gestellte Fragen – Elektriker Wien</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }} className="faq-grid">
+          <div className="faq-grid">
             {faqs.map((faq) => (
               <details key={faq.q} className="faq-item" style={{ background: 'white', border: '1px solid var(--border)', borderRadius: '8px', padding: '0', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
                 <summary style={{ cursor: 'pointer', fontWeight: 600, fontSize: '13px', color: 'var(--dark)', listStyle: 'none', userSelect: 'none', padding: '12px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'background 0.2s' }}>
