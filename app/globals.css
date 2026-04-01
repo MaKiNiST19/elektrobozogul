@@ -87,10 +87,27 @@ h1, h2, h3, h4 {
   color: var(--dark);
   letter-spacing: -0.025em;
 }
-h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
-h2 { font-size: clamp(1.4rem, 2.8vw, 2rem); }
+h1 { font-size: clamp(1.8rem, 4.5vw, 3.2rem); }
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem !important; }
+}
+h2 { font-size: clamp(1.3rem, 2.8vw, 2rem); }
 h3 { font-size: 1.1rem; font-weight: 600; }
 p  { color: var(--mid); line-height: 1.75; }
+
+.hero-title {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.6rem !important;
+    line-height: 1.25;
+  }
+}
 
 .container {
   width: 100%;
@@ -681,7 +698,7 @@ p  { color: var(--mid); line-height: 1.75; }
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 30px;
   padding-bottom: 20px;
 }
 
@@ -692,47 +709,53 @@ p  { color: var(--mid); line-height: 1.75; }
 @media (max-width: 640px) {
   .service-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
   
-  /* Mobilde kartları yatay (horizontal) yapıyoruz */
   .service-card__inner {
     flex-direction: row !important;
     height: auto !important;
-    min-height: 120px;
-    align-items: stretch;
+    min-height: 90px;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Daha yumuşak gölge */
   }
   
   .service-card__img-container {
-    width: 35% !important; /* Görsel solda %35 yer kaplasın */
-    height: auto !important;
-    min-height: 120px;
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 10px;
+    margin: 8px;
     flex-shrink: 0;
   }
 
   .service-card__body {
-    width: 65%;
-    padding: 12px 14px !important;
-    text-align: left !important; /* Metinler sola yaslı olsun */
+    flex: 1;
+    padding: 10px 14px 10px 6px !important;
+    text-align: left !important;
     border-top: none !important;
-    border-left: 3px solid var(--border);
+    border-left: none !important;
     justify-content: center;
   }
 
   .service-card__title {
-    font-size: 14px !important;
-    font-weight: 700 !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    margin-bottom: 2px !important;
+    color: var(--primary) !important;
   }
 
   .service-card__desc {
-    display: none; /* Mobilde yer kazanmak için açıklamayı gizliyoruz */
+    display: block; 
+    font-size: 10.5px !important;
+    line-height: 1.4 !important;
+    opacity: 0.7;
+    margin-top: 2px !important;
   }
 
   .service-card__body .btn-sparkle {
-    margin-top: 8px !important;
-    width: fit-content !important;
-    transform: scale(0.8) !important;
-    transform-origin: left center !important;
+    display: none;
   }
 }
 
@@ -1020,9 +1043,35 @@ p  { color: var(--mid); line-height: 1.75; }
   .orbit-layout {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
+    text-align: center;
   }
-  .orbit-visual { order: 1 !important; }
-  .orbit-text   { order: 2 !important; }
+  .orbit-visual { 
+    order: 1 !important; 
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-bottom: -60px;
+    margin-top: -40px;
+  }
+  .orbit-text { 
+    order: 2 !important; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .orbit-text ul {
+    align-items: center;
+    text-align: left;
+  }
+}
+@media (max-width: 540px) {
+  .orbit-visual {
+    transform: scale(0.65);
+  }
+}
+@media (max-width: 400px) {
+  .orbit-visual {
+    transform: scale(0.55);
+  }
 }
 
 @media (max-width: 640px) {
@@ -1071,15 +1120,16 @@ p  { color: var(--mid); line-height: 1.75; }
   .badge-item:nth-child(2) { animation-delay: 3s; }
   .badge-item:nth-child(3) { animation-delay: 6s; }
 
-  /* Footer: 1-column on mobile */
+  /* Footer: 2-columns for links on mobile */
   footer .container > div:first-child {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 20px !important;
   }
   footer .container > div:first-child > div:first-child {
-    grid-column: span 1;
+    grid-column: span 2;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 24px;
+    margin-bottom: 8px;
   }
   
   .section { padding: 60px 0 !important; }
@@ -1522,8 +1572,22 @@ body {
 
 @media (max-width: 600px) {
   .bezirk-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 16px;
   }
 }
 

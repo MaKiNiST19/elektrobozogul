@@ -115,10 +115,10 @@ export default function BezirkPage({ params }: { params: { bezirk: string } }) {
           </nav>
 
           <div style={{ display: 'inline-block', background: 'rgba(255,255,255,.12)', backdropFilter: 'blur(8px)', padding: '6px 16px', borderRadius: '30px', fontSize: '12px', fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '24px', color: 'var(--yellow)' }}>
-            ELEKTRIKER {bezirk.plz} · {bezirk.shortName.toUpperCase()} WIEN
+            ELEKTRIKER {bezirk.plz} · {bezirk.shortName.toUpperCase()} WIEN und Umgebung
           </div>
 
-          <h1 style={{ color: 'white', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '20px', maxWidth: '700px' }}>
+          <h1 className="hero-title" style={{ maxWidth: '700px' }}>
             Elektriker {bezirk.name} für Elektroinstallation, E-Befund und Notdienst
           </h1>
 

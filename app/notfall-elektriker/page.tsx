@@ -68,7 +68,7 @@ export default function NotfallElektrikerPage() {
       <section className="hero--notfall">
         <div className="container">
           <div style={{ display: 'inline-block', background: 'rgba(255,255,255,.1)', padding: '6px 14px', borderRadius: '30px', fontSize: '13px', fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', marginBottom: '24px' }}>
-            🔴 Akute Hilfe in allen 23 Bezirken
+            🔴 Akute Hilfe in allen 23 Bezirken und Umgebung
           </div>
           <h1>
             24/7 Elektriker Notdienst Wien

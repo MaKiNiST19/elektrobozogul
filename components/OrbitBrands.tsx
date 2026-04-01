@@ -105,8 +105,8 @@ export default function OrbitBrands() {
           </div>
 
           {/* ── Orbit Visual ── */}
-          <div className="orbit-visual" style={{ flex: "1", display: "flex", justifyContent: "flex-end", minWidth: "540px", position: "relative" }}>
-            <div style={{ position: "relative", width: "540px", height: "540px", flexShrink: 0 }}>
+          <div className="orbit-visual" style={{ flex: "1", display: "flex", justifyContent: "center", position: "relative" }}>
+            <div style={{ position: "relative", width: "100%", maxWidth: "540px", height: "auto", aspectRatio: "1/1", flexShrink: 0 }}>
 
               {/* Dashed rings */}
               <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none" }} viewBox="0 0 540 540">

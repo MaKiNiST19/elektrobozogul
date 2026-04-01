@@ -31,7 +31,7 @@ export default function LeistungenPage() {
             </ol>
           </nav>
           <p className="eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,255,255,0.2)', marginBottom: '16px' }}>Unsere Expertise</p>
-          <h1 style={{ color: 'white', fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '24px' }}>Meisterhafte Elektro-Services</h1>
+          <h1 className="hero-title" style={{ marginBottom: '24px' }}>Meisterhafte Elektro-Services</h1>
           <p style={{ maxWidth: '700px', fontSize: '1.2rem', color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>
             Von der schnellen Hilfe im Notfall bis hin zur zukunftssicheren Photovoltaik-Anlage. 
             Entdecken Sie unsere umfassenden Leistungen für Wien und Umgebung.

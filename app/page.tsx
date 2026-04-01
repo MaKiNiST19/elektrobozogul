@@ -70,7 +70,7 @@ export default function Home() {
         />
         <div className="hero__overlay" />
         <div className="hero__content">
-          <span className="hero__eyebrow">⚡ Zertifizierter Meisterbetrieb in Wien</span>
+          <span className="hero__eyebrow">⚡ Zertifizierter Meisterbetrieb in Wien und Umgebung</span>
           <h1>
             Ihr zuverlässiger <em>Elektriker in Wien</em> & Umgebung
           </h1>

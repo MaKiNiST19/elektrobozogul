@@ -122,7 +122,7 @@ export default function UnsereArbeitenPage() {
           <div style={{ display: 'inline-block', background: 'var(--yellow)', padding: '6px 16px', borderRadius: '30px', fontSize: '12px', fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '24px', color: 'var(--primary)' }}>
             📷 {galleryImages.length} Projektbilder
           </div>
-          <h1 style={{ color: 'white', fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
+          <h1 className="hero-title">
             Unsere Arbeiten <br/><span style={{ color: 'var(--yellow)' }}>& Projekte</span>
           </h1>
           <p style={{ maxWidth: '700px', fontSize: '1.25rem', color: 'rgba(255,255,255,.9)', lineHeight: 1.7 }}>
@@ -152,11 +152,7 @@ export default function UnsereArbeitenPage() {
       {/* Polaroid Gallery Grid */}
       <section className="section" style={{ background: 'var(--bg)', paddingTop: '80px', paddingBottom: '120px' }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-            gap: '40px',
-          }}>
+          <div className="gallery-grid">
             {galleryImages.map((img, i) => {
                // Pseudo-random rotation between -3 and 3 degrees for organic feel
                const rotation = ( (i * 13) % 7 ) - 3;
