@@ -713,49 +713,47 @@ p  { color: var(--mid); line-height: 1.75; }
   }
   
   .service-card__inner {
-    flex-direction: row !important;
+    flex-direction: column !important;
     height: auto !important;
-    min-height: 90px;
-    align-items: center;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Daha yumuşak gölge */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
   
   .service-card__img-container {
-    width: 90px !important;
-    height: 90px !important;
-    border-radius: 10px;
-    margin: 8px;
+    width: 100% !important;
+    height: 180px !important;
+    border-radius: 12px 12px 0 0;
     flex-shrink: 0;
   }
 
   .service-card__body {
     flex: 1;
-    padding: 10px 14px 10px 6px !important;
-    text-align: left !important;
+    padding: 20px !important;
+    text-align: center !important;
     border-top: none !important;
     border-left: none !important;
-    justify-content: center;
   }
 
   .service-card__title {
-    font-size: 13px !important;
+    font-size: 16px !important;
     font-weight: 800 !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 8px !important;
     color: var(--primary) !important;
   }
 
   .service-card__desc {
     display: block; 
-    font-size: 10.5px !important;
-    line-height: 1.4 !important;
-    opacity: 0.7;
-    margin-top: 2px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    opacity: 0.8;
+    margin-top: 4px !important;
+    margin-bottom: 16px !important;
   }
 
   .service-card__body .btn-sparkle {
-    display: none;
+    display: inline-flex !important;
+    width: 100%;
   }
 }
 
@@ -888,13 +886,45 @@ p  { color: var(--mid); line-height: 1.75; }
 
 /* FAQ */
 .faq-list { display: flex; flex-direction: column; gap: 8px; }
-.faq-item { border: 1px solid var(--border); border-radius: var(--r-md); overflow: hidden; transition: border-color .15s; }
-.faq-item:hover { border-color: var(--secondary); }
-.faq-item summary { padding: 16px 20px; font-weight: 500; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none; color: var(--dark); gap: 12px; }
+.faq-item { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: all .2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.faq-item:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.faq-item summary { 
+  padding: 16px 20px; 
+  font-weight: 700; 
+  font-size: 14px; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  list-style: none; 
+  color: var(--dark); 
+  user-select: none;
+  gap: 12px; 
+  transition: background 0.2s;
+}
 .faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after { content: '+'; font-size: 22px; color: var(--secondary); font-weight: 300; flex-shrink: 0; line-height: 1; }
-.faq-item[open] summary::after { content: ' '; }
-.faq-answer { padding: 14px 20px 16px; font-size: 14px; border-top: 1px solid var(--border); color: var(--mid); }
+.faq-item summary::after { 
+  content: '+'; 
+  font-size: 20px; 
+  color: var(--primary); 
+  font-weight: 400; 
+  flex-shrink: 0; 
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.faq-item[open] summary { border-bottom: 1px solid var(--border); background: var(--bg); }
+.faq-item[open] summary::after { content: '−'; transform: rotate(180deg); }
+.faq-answer { 
+  padding: 16px 20px; 
+  font-size: 13.5px; 
+  color: var(--mid); 
+  line-height: 1.6; 
+  background: white; 
+}
 
 /* Chips */
 .chip-list { display: flex; flex-wrap: wrap; gap: 7px; }
@@ -1076,6 +1106,7 @@ p  { color: var(--mid); line-height: 1.75; }
 
 @media (max-width: 640px) {
   .hero h1 { font-size: 1.8rem; }
+  .hero__img { object-position: calc(50% + 5rem) 30% !important; }
   .hero__btns { flex-direction: column; width: 100%; }
   .hero__btns a { width: 100%; }
   .hero__btns .text_button { width: 100%; }
@@ -1105,8 +1136,8 @@ p  { color: var(--mid); line-height: 1.75; }
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
+    justify-content: center !important;
+    text-align: center !important;
     width: 100% !important;
     padding: 12px 20px !important;
     border: none !important;

@@ -26,7 +26,7 @@ export default function Home() {
   const faqs = [
     { q: "Bieten Sie einen 24h Notdienst in ganz Wien an?", a: "Ja, wir sind in allen 23 Bezirken Wiens rund um die Uhr für elektrische Notfälle erreichbar. Unser Notdienst-Team steht Ihnen täglich zur Verfügung – auch an Wochenenden und Feiertagen." },
     { q: "Wie schnell sind Sie im Falle eines Stromausfalls vor Ort?", a: "In der Regel sind wir innerhalb von 30–60 Minuten bei Ihnen vor Ort, abhängig von Ihrem Standort und der Verkehrslage. Bei kritischen Störungen kommen wir noch schneller." },
-    { q: "Was kostet ein Notdienst-Einsatz beim Elektriker?", a: "Die Kosten für einen Notdienst-Einsatz werden transparent kommuniziert. Wir erstellen Ihnen vor Arbeitsbeginn ein Angebot, damit Sie die Kosten kennen. Es gibt keine versteckten Zusatzgebühren." },
+    { q: "Was kostet ein Notdienst-Einsatz beim Elektriker?", a: "Die Kosten für den Notdienst werden vorab transparent mitgeteilt. Vor Arbeitsbeginn erhalten Sie ein Angebot. Es entstehen keine versteckten Zusatzgebühren." },
     { q: "Führen Sie auch E-Befunde für Mietwohnungen durch?", a: "Ja, wir erstellen rechtssichere E-Befunde für Privatpersonen, Vermieter und Hausverwaltungen nach ÖNORM. Der E-Befund dokumentiert den Zustand Ihrer Elektroinstallation." },
     { q: "Welche Elektroinstallationen führen Sie durch?", a: "Wir bieten Elektroinstallationen für Neubauten, Renovierungen und Modernisierungen. Das umfasst Stromverteilung, Beleuchtung, Steckdosen, Smart-Home-Systeme und Photovoltaik-Anlagen." },
     { q: "Sind Sie ein zertifizierter Meisterbetrieb?", a: "Ja, Elektro-Bozogul ist ein konzessionierter Meisterbetrieb in Wien. Alle unsere Arbeiten werden nach ÖNORM und ÖNORM-Bestimmungen durchgeführt." },
@@ -38,10 +38,10 @@ export default function Home() {
     { q: "Was ist Smart Home und wie können Sie helfen?", a: "Smart Home bedeutet intelligente Hausautomation – von intelligenten Beleuchtungssystemen bis zu Sicherheitssystemen. Wir installieren und konfigurieren moderne Smart-Home-Lösungen." },
     { q: "Welche Bezirke in Wien bedienen Sie?", a: "Wir bedienen alle 23 Wiener Bezirke: Innere Stadt, Leopoldstadt, Landstraße, Wieden, Margareten, Mariahilf, Neubau, Josefstadt, Alsergrund, Favoriten, Simmering, Meidling und weitere." },
     { q: "Wie buche ich einen Termin beim Elektriker?", a: "Sie können uns telefonisch unter +43 660 1230073 anrufen oder über unsere Website einen Termin buchen. Für Notfälle sind wir rund um die Uhr erreichbar." },
-    { q: "Bieten Sie eine Garantie auf Ihre Arbeiten?", a: "Ja, wir garantieren die Qualität unserer Arbeit. Sollte es Probleme geben, beheben wir diese kostenlos. Die genauen Bedingungen besprechen wir mit Ihnen." },
-    { q: "Kann ich als Mieter einen Elektriker bestellen?", a: "Ja, Sie können uns auch als Mieter bestellen. Bei Reparaturen trägt üblicherweise der Vermieter die Kosten. Für Notfälle kontaktieren Sie uns direkt." },
+    { q: "Bieten Sie eine Garantie auf Ihre Arbeiten?", a: "Wir gewährleisten die Qualität unserer Leistungen im Rahmen der gesetzlichen Gewährleistung. Mängel, die auf unsere Arbeit zurückzuführen sind, beheben wir kostenfrei. Ausgenommen sind Schäden durch unsachgemäße Nutzung oder äußere Einflüsse." },
+    { q: "Kann ich als Mieter einen Elektriker bestellen?", a: "Ja, auch als Mieter können Sie einen Elektriker beauftragen. Die Kostenübernahme erfolgt bei erforderlichen Reparaturen üblicherweise durch den Vermieter und sollte im Einzelfall geklärt werden. In Notfällen stehen wir Ihnen direkt zur Verfügung." },
     { q: "Was tun bei Stromausfall – wann Elektriker anrufen?", a: "Prüfen Sie zuerst Ihren Stromzähler und FI-Schalter. Wenn Sie das Problem nicht selbst lösen können oder es mehrere Bereiche betrifft, rufen Sie uns an." },
-    { q: "Wie erkenne ich fehlerhafte Elektroinstallationen?", a: "Anzeichen sind häufig auslösende Sicherungsautomaten, Stromschläge an Geräten, Verschmorungsgeruch oder warme Steckdosen. Lassen Sie diese sofort von einem Fachmann prüfen." },
+    { q: "Wie erkenne ich fehlerhafte Elektroinstallationen?", a: "Typische Anzeichen sind häufig auslösende Sicherungsautomaten, spürbare Stromschläge an Geräten, Verschmorungsgeruch oder ungewöhnlich warme Steckdosen. In diesen Fällen sollte die Anlage umgehend von einer Elektrofachkraft geprüft werden." },
     { q: "Was kostet eine Elektroinstallation im Neubau?", a: "Die Kosten hängen vom Umfang, der Fläche und den Anforderungen ab. Wir erstellen Ihnen gerne ein detailliertes Angebot basierend auf Ihren Plänen." },
     { q: "Wie lange dauert eine komplette Elektrorenovierung?", a: "Das hängt von der Größe und Komplexität ab. Ein durchschnittliches Einfamilienhaus benötigt etwa 2–4 Wochen. Wir erstellen einen Zeitplan mit Ihnen." }
   ];
@@ -249,14 +249,34 @@ export default function Home() {
           <h2 style={{ color: 'white', fontSize: 'clamp(1.4rem, 3vw, 2.2rem)', fontWeight: 800, letterSpacing: '-0.02em', maxWidth: '780px', margin: '0 auto 32px', lineHeight: 1.2, textTransform: 'uppercase' }}>
             Vertrauenswürdigen Menschen an,<br /> und Ihr Haus wird immer hell bleiben.
           </h2>
-          <a href="tel:+436601230073" className="btn-sparkle">
-            <span className="text_button" style={{ padding: '14px 36px', fontSize: '16px', fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l1.34-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              +43 660 123 00 73
-            </span>
-          </a>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="tel:+436601230073" className="btn-sparkle">
+              <span className="text_button" style={{ padding: '14px 36px', fontSize: '16px', fontWeight: 800, display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6.29 6.29l1.34-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                +43 660 123 00 73
+              </span>
+            </a>
+            <a href="mailto:office@elektro-bozogul.at" className="btn-sparkle">
+              <span className="text_button" style={{ 
+                padding: '14px 36px', 
+                fontSize: '16px', 
+                fontWeight: 800, 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                gap: '10px',
+                background: 'white',
+                color: 'var(--primary)'
+              }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                office@elektro-bozogul.at
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -306,7 +326,7 @@ export default function Home() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               {[
                 { name: 'Thomas K.', text: 'Sehr kompetent und schnell. Nach dem Stromausfall war das Team innerhalb von 45 Minuten vor Ort.', stars: 5 },
-                { name: 'Hausverwaltung Mayer & Co.', text: 'Verlässlicher Partner für unsere Wohnanlagen. E-Befunde werden immer pünktlich und rechtssicher erstellt.', stars: 5 },
+                { name: 'Hausverwaltung Mayer & Co.', text: 'Verlässlicher Partner for unsere Wohnanlagen. E-Befunde werden immer pünktlich und rechtssicher erstellt.', stars: 5 },
                 { name: 'Maria S.', text: 'Top Arbeit bei der Elektroinstallation in unserer neuen Wohnung. Faire Preise und sehr sauber gearbeitet.', stars: 5 },
               ].map((r) => (
                 <div key={r.name} style={{ background: 'white', border: '1px solid var(--border)', borderRadius: '12px', padding: '20px 24px', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
@@ -414,11 +434,11 @@ export default function Home() {
           <h2 style={{ textAlign: 'center', marginBottom: '48px' }}>Häufig gestellte Fragen – Elektriker Wien</h2>
           <div className="faq-grid">
             {faqs.map((faq) => (
-              <details key={faq.q} className="faq-item" style={{ background: 'white', border: '1px solid var(--border)', borderRadius: '8px', padding: '0', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}>
-                <summary style={{ cursor: 'pointer', fontWeight: 600, fontSize: '13px', color: 'var(--dark)', listStyle: 'none', userSelect: 'none', padding: '12px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', transition: 'background 0.2s' }}>
+              <details key={faq.q} className="faq-item">
+                <summary>
                   <span>{faq.q}</span>
                 </summary>
-                <div className="faq-answer" style={{ fontSize: '13px', color: 'var(--mid)', lineHeight: 1.5, padding: '0 14px 12px 14px', borderTop: '1px solid var(--border)', maxHeight: '200px', overflow: 'auto' }}>
+                <div className="faq-answer">
                   {faq.a}
                 </div>
               </details>
