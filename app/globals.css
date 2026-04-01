@@ -998,14 +998,19 @@ p  { color: var(--mid); line-height: 1.75; }
 
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 960px) {
-  .hero { height: auto; min-height: 460px; }
+  .hero { height: auto; min-height: 460px; padding: 120px 0 60px; }
+  .hero__content { padding: 0 24px; align-items: center; text-align: center; }
+  .hero h1 { font-size: 2.2rem; margin-bottom: 16px; }
+  .hero__sub { margin-bottom: 24px; }
+  .hero__btns { justify-content: center; gap: 16px; }
+  
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .bezirk-grid  { grid-template-columns: repeat(3, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .navbar__links { display: none; }
   .badge-bar { flex-wrap: wrap; }
   .badge-item { min-width: 50%; }
-  .about-grid, .dienst-grid, .reviews-grid, .ebefund-grid { grid-template-columns: 1fr !important; }
+  .about-grid, .dienst-grid, .reviews-grid, .ebefund-grid, .faq-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
   /* feature cards 3x2 → 2x3 */
   .feature-cards-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
@@ -1021,54 +1026,64 @@ p  { color: var(--mid); line-height: 1.75; }
 }
 
 @media (max-width: 640px) {
-  /* service grid */
-  .service-grid { grid-template-columns: repeat(2, 1fr); }
-  .bezirk-grid  { grid-template-columns: repeat(2, 1fr); }
-  .footer__grid { grid-template-columns: 1fr; }
-  .notfall-banner { padding: 28px 24px; }
-  .hero h1 { font-size: 2rem; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero__btns { flex-direction: column; width: 100%; }
+  .hero__btns a { width: 100%; }
+  .hero__btns .text_button { width: 100%; }
 
+  .service-grid { grid-template-columns: 1fr !important; }
+  .bezirk-grid  { grid-template-columns: repeat(2, 1fr); }
+  .feature-cards-grid { grid-template-columns: 1fr !important; }
+  .bezirke-grid-home { grid-template-columns: 1fr !important; }
+  
+  .footer__grid { grid-template-columns: 1fr; }
+  .notfall-banner { padding: 28px 24px; flex-direction: column; text-align: center; gap: 20px; }
+  
   /* Badge bar: single item fade carousel */
   .badge-bar {
     position: relative !important;
-    height: 120px !important;
+    height: 100px !important;
     overflow: hidden !important;
     display: block !important;
     padding: 0 !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    border-radius: 16px !important;
+    margin: -30px 16px 40px !important;
+    border-radius: 12px !important;
+    width: auto !important;
   }
   .badge-item {
     position: absolute !important;
     inset: 0 !important;
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     width: 100% !important;
-    min-width: unset !important;
+    padding: 12px 20px !important;
+    border: none !important;
     opacity: 0;
     animation: badge-fade 9s ease-in-out infinite;
   }
+  .badge-laurel { min-height: unset !important; margin: 0 12px 0 0 !important; }
+  .badge-icon-placeholder { width: 40px; height: 40px; }
+  
   .badge-item:nth-child(1) { animation-delay: 0s; }
   .badge-item:nth-child(2) { animation-delay: 3s; }
   .badge-item:nth-child(3) { animation-delay: 6s; }
 
-  /* Feature cards 3×2 → 2×3 on mobile */
-  .feature-cards-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Footer: 2-column grid on mobile */
+  /* Footer: 1-column on mobile */
   footer .container > div:first-child {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 28px 20px !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
-  /* Brand section spans full width */
   footer .container > div:first-child > div:first-child {
-    grid-column: span 2;
-    padding-bottom: 20px;
+    grid-column: span 1;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 4px;
+    padding-bottom: 24px;
   }
+  
+  .section { padding: 60px 0 !important; }
+  .section--sm { padding: 40px 0 !important; }
 }
 /* New Pages Styles */
 .leistung-hero {
