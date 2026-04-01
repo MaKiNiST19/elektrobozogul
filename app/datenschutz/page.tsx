@@ -24,7 +24,7 @@ export default function DatenschutzPage() {
               <h2>1. Verantwortlicher</h2>
               <p>
                 <strong>Elektro-Bozogul</strong><br />
-                Inhaber: Ramazan Bozogul<br />
+                Inhaber: Erdem Bozogul<br />
                 Telefon: <a href="tel:+436601230073">+43 660 1230073</a><br />
                 E-Mail: <a href="mailto:office@elektro-bozogul.at">office@elektro-bozogul.at</a>
               </p>

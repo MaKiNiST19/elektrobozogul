@@ -27,7 +27,7 @@ export default function ImpressumPage() {
               <p>
                 <strong>Elektro-Bozogul</strong><br />
                 Elektrotechnik-Meisterbetrieb<br />
-                Inhaber: Ramazan Bozogul
+                Inhaber: Erdem Bozogul
               </p>
 
               <h3>Kontakt</h3>
