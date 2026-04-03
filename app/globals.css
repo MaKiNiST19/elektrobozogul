@@ -1895,3 +1895,14 @@ body {
   }
 }
 
+
+/* Footer Niederösterreich links */
+.footer-noe-link {
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+.footer-noe-link:hover {
+  color: white;
+}

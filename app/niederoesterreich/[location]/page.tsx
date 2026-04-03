@@ -6,9 +6,9 @@ import { LEISTUNGEN } from '@/lib/leistungen';
 import { MagicCard } from '@/components/base/magic-card';
 import { RatingBadge } from '@/components/foundations/rating-badge';
 
-export async function generateStaticParams() {
-  return NIEDEROESTERREICH_LOCATIONS.map(l => ({ location: l.slug }));
-}
+// ISR – generated on first request, cached for 30 days
+// Keeps build fast; Vercel serves these as server-rendered on first hit
+export const revalidate = 2592000;
 
 export async function generateMetadata({ params }: { params: { location: string } }): Promise<Metadata> {
   const loc = NIEDEROESTERREICH_LOCATIONS.find(l => l.slug === params.location);

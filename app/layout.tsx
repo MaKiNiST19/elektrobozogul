@@ -230,12 +230,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <p style={{ color: 'var(--yellow)', fontSize: '10px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '12px' }}>{group.title}</p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 12px' }}>
                       {group.towns.map(town => (
-                        <a 
-                          key={town} 
-                          href={`/niederoesterreich/${town.toLowerCase().replace(/ /g, '-').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')}`} 
-                          style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontSize: '12px', transition: 'color 0.2s' }}
-                          onMouseOver={(e) => e.currentTarget.style.color = 'white'}
-                          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}
+                        <a
+                          key={town}
+                          href={`/niederoesterreich/${town.toLowerCase().replace(/ /g, '-').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')}`}
+                          className="footer-noe-link"
                         >
                           {town}
                         </a>
