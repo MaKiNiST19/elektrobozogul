@@ -13,9 +13,9 @@ import BrandCarousel from '@/components/foundations/BrandCarousel';
 import path from 'path';
 import fs from 'fs';
 
-export async function generateStaticParams() {
-  return BEZIRKE.flatMap(b => LEISTUNGEN.map(l => ({ bezirk: b.slug, leistung: l.slug })));
-}
+// Removed generateStaticParams – these noindex pages are generated on-demand (ISR)
+// to avoid Vercel build timeout (207 pages × generation time = timeout)
+export const dynamic = 'force-static';
 
 export async function generateMetadata({ params }: { params: { bezirk: string; leistung: string } }): Promise<Metadata> {
   const bezirk = BEZIRKE.find(b => b.slug === params.bezirk);
