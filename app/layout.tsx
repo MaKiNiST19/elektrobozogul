@@ -215,6 +215,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
             </div>
+            
+            {/* Niederösterreich Regions Row */}
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '40px', marginTop: '40px', marginBottom: '60px' }}>
+              <p style={{ color: 'white', fontWeight: 700, fontSize: '11px', letterSpacing: '0.1em', marginBottom: '24px', textTransform: 'uppercase' }}>Einsatzgebiete Niederösterreich</p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '30px' }}>
+                {[
+                  { title: 'Süd / Südwest', towns: ['Vösendorf', 'Brunn am Gebirge', 'Perchtoldsdorf', 'Maria Enzersdorf', 'Mödling', 'Gumpoldskirchen', 'Guntramsdorf', 'Laxenburg', 'Hinterbrühl', 'Gaaden'] },
+                  { title: 'West', towns: ['Purkersdorf', 'Pressbaum', 'Gablitz', 'Mauerbach', 'Klosterneuburg'] },
+                  { title: 'Nord / Nordost', towns: ['Gerasdorf bei Wien', 'Wolkersdorf im Weinviertel', 'Korneuburg', 'Langenzersdorf', 'Bisamberg'] },
+                  { title: 'Ost / Südost', towns: ['Schwechat', 'Fischamend', 'Rauchenwarth', 'Himberg', 'Ebergassing'] }
+                ].map(group => (
+                  <div key={group.title}>
+                    <p style={{ color: 'var(--yellow)', fontSize: '10px', fontWeight: 800, textTransform: 'uppercase', marginBottom: '12px' }}>{group.title}</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 12px' }}>
+                      {group.towns.map(town => (
+                        <a 
+                          key={town} 
+                          href={`/niederoesterreich/${town.toLowerCase().replace(/ /g, '-').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue')}`} 
+                          style={{ color: 'rgba(255,255,255,0.45)', textDecoration: 'none', fontSize: '12px', transition: 'color 0.2s' }}
+                          onMouseOver={(e) => e.currentTarget.style.color = 'white'}
+                          onMouseOut={(e) => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}
+                        >
+                          {town}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             {/* Footer Bottom */}
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
