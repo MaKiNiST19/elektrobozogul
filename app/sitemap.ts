@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
-import { BEZIRKE, UMGEBUNG } from '@/lib/bezirke';
+import { BEZIRKE } from '@/lib/bezirke';
 import { LEISTUNGEN } from '@/lib/leistungen';
+import { NIEDEROESTERREICH_LOCATIONS } from '@/data/niederoesterreich';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://elektro-bozogul.at';
@@ -35,9 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Bezirk × Leistung sayfaları noindex olarak işaretlendi – sitemap'den çıkarıldı
   // Bu sayfalar scaled content abuse riski nedeniyle Google'dan gizlendi
 
-  // Çevre bölge sayfaları
-  const umgebungPages: MetadataRoute.Sitemap = UMGEBUNG.map(o => ({
-    url: `${baseUrl}/umgebung/${o.slug}`,
+  // Niederösterreich sayfaları
+  const niederoesterreichPages: MetadataRoute.Sitemap = NIEDEROESTERREICH_LOCATIONS.map(l => ({
+    url: `${baseUrl}/niederoesterreich/${l.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.70,
@@ -47,6 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticPages,
     ...leistungPages,
     ...bezirkPages,
-    ...umgebungPages,
+    ...niederoesterreichPages,
   ];
 }
