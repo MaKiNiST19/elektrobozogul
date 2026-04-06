@@ -15,6 +15,19 @@ export const metadata: Metadata = {
 };
 
 const galleryImages = [
+  // Newly added Wien-Elektriker-Bozogul images
+  { src: '/images/gallery/wien-elektriker-bozogul2.jpeg', caption: 'Meisterbetrieb-Installation', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul3.jpeg', caption: 'Elektro-Anlage Wien', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul4.jpeg', caption: 'Notdienst Service', category: 'Notdienst' },
+  { src: '/images/gallery/wien-elektriker-bozogul5.jpeg', caption: 'Verteilerkasten Projekt', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul6.jpeg', caption: 'Sicherheits-Überprüfung', category: 'Sicherheit' },
+  { src: '/images/gallery/wien-elektriker-bozogul7.jpeg', caption: 'Elektrowerkstatt Wien', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul8.jpeg', caption: 'Komplettverkabelung', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul9.jpeg', caption: 'Elektro-Sanierung Projekt', category: 'Sanierung' },
+  { src: '/images/gallery/wien-elektriker-bozogul10.jpeg', caption: 'Schaltschrankbau Wien', category: 'Installation' },
+  { src: '/images/gallery/wien-elektriker-bozogul11.jpeg', caption: 'FI-Schutzschalter Montage', category: 'Sicherheit' },
+  { src: '/images/gallery/wien-elektriker-bozogul12.jpeg', caption: 'Professionelle Elektroinstallation', category: 'Installation' },
+
   // Newly added Notdienst images
   { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst1.jpeg', caption: 'Notdienst Einsatz', category: 'Notdienst' },
   { src: '/images/gallery/elektro-bozogul-wien-elektriker-notdienst2.jpeg', caption: 'Stromausfall Behebung', category: 'Notdienst' },
