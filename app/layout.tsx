@@ -6,6 +6,7 @@ import { LEISTUNGEN } from '../lib/leistungen';
 import { generateOrganizationSchema } from '../lib/schema';
 import FooterBadge from '../components/FooterBadge';
 import MobileNav from '../components/MobileNav';
+import MobileStickyBar from '../components/MobileStickyBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -126,6 +127,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
 
         {/* Mobile nav drawer renders here */}
+        <MobileStickyBar />
 
         <footer className="footer" style={{ background: 'var(--dark)', color: 'white', padding: '80px 0' }}>
           <div className="container">
