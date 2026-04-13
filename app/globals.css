@@ -1072,18 +1072,17 @@ p  { color: var(--mid); line-height: 1.75; }
 @media (max-width: 768px) {
   .orbit-layout {
     grid-template-columns: 1fr !important;
-    gap: 40px !important;
+    gap: 20px !important;
     text-align: center;
   }
-  .orbit-visual { 
-    order: 1 !important; 
-    transform: scale(0.8);
-    transform-origin: center;
-    margin-bottom: -60px;
-    margin-top: -40px;
+  .orbit-visual {
+    order: 1 !important;
+    transform: scale(0.7);
+    transform-origin: center top;
+    margin-bottom: -80px;
   }
-  .orbit-text { 
-    order: 2 !important; 
+  .orbit-text {
+    order: 2 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1095,12 +1094,14 @@ p  { color: var(--mid); line-height: 1.75; }
 }
 @media (max-width: 540px) {
   .orbit-visual {
-    transform: scale(0.65);
+    transform: scale(0.55);
+    margin-bottom: -120px;
   }
 }
 @media (max-width: 400px) {
   .orbit-visual {
-    transform: scale(0.55);
+    transform: scale(0.48);
+    margin-bottom: -140px;
   }
 }
 
