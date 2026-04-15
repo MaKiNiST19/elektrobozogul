@@ -1074,10 +1074,14 @@ p  { color: var(--mid); line-height: 1.75; }
    exactly compensates the wasted space: margin-bottom = -(1 − scale) × 100%.
    Works at every viewport width because the % base matches the content. */
 @media (max-width: 768px) {
+  .orbit-section {
+    padding: 40px 0 80px !important;
+  }
   .orbit-layout {
     grid-template-columns: 1fr !important;
     gap: 0 !important;
     text-align: center;
+    padding-top: 0 !important;
   }
   .orbit-visual {
     order: 1 !important;
@@ -1086,9 +1090,11 @@ p  { color: var(--mid); line-height: 1.75; }
     max-width: 540px;
     margin-left: auto;
     margin-right: auto;
-    transform: scale(0.6);
+    /* scale = (100vw - 20px) / 540  →  fills screen with 10px padding each side */
+    transform: scale(calc((100vw - 20px) / 540));
     transform-origin: center top;
-    margin-bottom: -38%;
+    /* margin-bottom compensates invisible layout box + extra space for orbit overshoot */
+    margin-bottom: calc((100vw - 20px) / 540 * 100% - 100% + 60px);
     overflow: visible;
   }
   .orbit-text {
@@ -1096,23 +1102,11 @@ p  { color: var(--mid); line-height: 1.75; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 100px;
   }
   .orbit-text ul {
     align-items: center;
     text-align: left;
-  }
-}
-@media (max-width: 540px) {
-  .orbit-visual {
-    transform: scale(0.48);
-    margin-bottom: -50%;
-  }
-}
-@media (max-width: 400px) {
-  .orbit-visual {
-    transform: scale(0.42);
-    margin-bottom: -56%;
   }
 }
 

@@ -59,7 +59,7 @@ const brands = [
 
 export default function OrbitBrands() {
   return (
-    <section style={{ background: "white", padding: "100px 0", overflow: "hidden" }}>
+    <section className="orbit-section" style={{ background: "white", padding: "100px 0", overflow: "hidden" }}>
       <style>{`
         @keyframes orbit-spin {
           from { transform: rotate(0deg); }
