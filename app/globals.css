@@ -1068,24 +1068,35 @@ p  { color: var(--mid); line-height: 1.75; }
   .feature-cards-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
-/* Orbit stacks at 768px */
+/* Orbit stacks at 768px
+   CSS transform:scale() doesn't shrink layout box. Fix: cap .orbit-visual
+   to max-width:540px (same as inner orbit div) so %-based margin-bottom
+   exactly compensates the wasted space: margin-bottom = -(1 − scale) × 100%.
+   Works at every viewport width because the % base matches the content. */
 @media (max-width: 768px) {
   .orbit-layout {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 0 !important;
     text-align: center;
   }
   .orbit-visual {
     order: 1 !important;
-    transform: scale(0.7);
+    flex: none !important;
+    width: 100% !important;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(0.6);
     transform-origin: center top;
-    margin-bottom: -80px;
+    margin-bottom: -38%;
+    overflow: visible;
   }
   .orbit-text {
     order: 2 !important;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
   }
   .orbit-text ul {
     align-items: center;
@@ -1094,14 +1105,14 @@ p  { color: var(--mid); line-height: 1.75; }
 }
 @media (max-width: 540px) {
   .orbit-visual {
-    transform: scale(0.55);
-    margin-bottom: -120px;
+    transform: scale(0.48);
+    margin-bottom: -50%;
   }
 }
 @media (max-width: 400px) {
   .orbit-visual {
-    transform: scale(0.48);
-    margin-bottom: -140px;
+    transform: scale(0.42);
+    margin-bottom: -56%;
   }
 }
 
