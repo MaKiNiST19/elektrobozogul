@@ -1086,15 +1086,14 @@ p  { color: var(--mid); line-height: 1.75; }
   .orbit-visual {
     order: 1 !important;
     flex: none !important;
-    width: 100% !important;
-    max-width: 540px;
-    margin-left: auto;
+    width: 540px !important;
+    max-width: none !important;
+    margin-left: calc(50% - 270px) !important;
     margin-right: auto;
-    /* scale = (100vw - 20px) / 540  →  fills screen with 10px padding each side */
-    transform: scale(calc((100vw - 20px) / 540));
+    /* 768px viewport: (748/632)=1.18 → cap at 1.0 */
+    transform: scale(0.95);
     transform-origin: center top;
-    /* margin-bottom compensates invisible layout box + extra space for orbit overshoot */
-    margin-bottom: calc((100vw - 20px) / 540 * 100% - 100% + 60px);
+    margin-bottom: -27px;  /* -(1-0.95)*540 + 60 */
     overflow: visible;
   }
   .orbit-text {
@@ -1108,6 +1107,30 @@ p  { color: var(--mid); line-height: 1.75; }
     align-items: center;
     text-align: left;
   }
+}
+@media (max-width: 540px) {
+  .orbit-visual {
+    /* (520/632)=0.82 */
+    transform: scale(0.82) !important;
+    margin-bottom: calc(-0.18 * 540px + 40px) !important;
+  }
+  .orbit-text { padding-top: 60px !important; }
+}
+@media (max-width: 440px) {
+  .orbit-visual {
+    /* (420/632)=0.665 */
+    transform: scale(0.665) !important;
+    margin-bottom: calc(-0.335 * 540px + 40px) !important;
+  }
+  .orbit-text { padding-top: 50px !important; }
+}
+@media (max-width: 375px) {
+  .orbit-visual {
+    /* (355/632)=0.562 */
+    transform: scale(0.562) !important;
+    margin-bottom: calc(-0.438 * 540px + 40px) !important;
+  }
+  .orbit-text { padding-top: 40px !important; }
 }
 
 @media (max-width: 640px) {
