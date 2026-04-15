@@ -1110,27 +1110,24 @@ p  { color: var(--mid); line-height: 1.75; }
 }
 @media (max-width: 540px) {
   .orbit-visual {
-    /* (520/632)=0.82 */
     transform: scale(0.82) !important;
-    margin-bottom: calc(-0.18 * 540px + 40px) !important;
+    margin-bottom: calc(-0.18 * 540px + 10px) !important;
   }
-  .orbit-text { padding-top: 60px !important; }
+  .orbit-text { padding-top: 40px !important; }
 }
 @media (max-width: 440px) {
   .orbit-visual {
-    /* (420/632)=0.665 */
     transform: scale(0.665) !important;
-    margin-bottom: calc(-0.335 * 540px + 40px) !important;
+    margin-bottom: calc(-0.335 * 540px + 10px) !important;
   }
-  .orbit-text { padding-top: 50px !important; }
+  .orbit-text { padding-top: 30px !important; }
 }
 @media (max-width: 375px) {
   .orbit-visual {
-    /* (355/632)=0.562 */
     transform: scale(0.562) !important;
-    margin-bottom: calc(-0.438 * 540px + 40px) !important;
+    margin-bottom: calc(-0.438 * 540px + 10px) !important;
   }
-  .orbit-text { padding-top: 40px !important; }
+  .orbit-text { padding-top: 20px !important; }
 }
 
 @media (max-width: 640px) {
